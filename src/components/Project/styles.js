@@ -8,4 +8,14 @@ export const Tag = styled(P)`
 export const ProjectImage = styled.img`
   border: 1px solid #000;
   width: 100%;
+  height: 400px;
+  object-fit: cover;
+
+  @media (max-width: 1100px) {
+    height: 200px;
+  }
+
+  @media (max-width: 600px) {
+    height: 300px;
+  }
 `;
