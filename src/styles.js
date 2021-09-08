@@ -60,3 +60,7 @@ export const Box = styled.div`
   padding: 20px;
   margin-bottom: 20px;
 `;
+
+export const Space = styled.div`
+  margin-top: 20px;
+`;
