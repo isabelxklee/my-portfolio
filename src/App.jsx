@@ -1,7 +1,7 @@
 import Home from "./pages/Home";
 import { BrowserRouter, Route } from "react-router-dom";
 import Header from "./components/Header";
-import { GlobalStyle } from "./styles";
+import { GlobalStyle, Wrapper } from "./styles";
 
 function App() {
   return (
@@ -9,10 +9,10 @@ function App() {
       <GlobalStyle />
       <BrowserRouter>
         <Header />
-        <div>
+        <Wrapper>
           <Route component={Home} path="/" exact />
           {/* <Route component={Post} path="/:slug" /> */}
-        </div>
+        </Wrapper>
       </BrowserRouter>
     </>
   );

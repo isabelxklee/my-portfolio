@@ -21,6 +21,10 @@ export const StyledLink = styled(Link)`
   }
 `;
 
+export const Wrapper = styled.div`
+  margin: 40px;
+`;
+
 export const H1 = styled.h1`
   font-size: 120px;
   font-weight: 500;
@@ -31,11 +35,11 @@ export const H1 = styled.h1`
 `;
 
 export const P = styled.p`
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 400;
   margin: 0;
 
   @media (max-width: 600px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `;
