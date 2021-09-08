@@ -2,5 +2,7 @@ import styled from "styled-components";
 
 export const ProjectContainer = styled.div`
   display: grid;
-  grid-template: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 `;
