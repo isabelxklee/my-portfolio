@@ -27,8 +27,6 @@ const Work = () => {
       .catch(console.error);
   }, []);
 
-  console.log(display);
-
   const handleClick = () => {
     setDisplay((display) => !display);
   };
