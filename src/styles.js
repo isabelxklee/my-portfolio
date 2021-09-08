@@ -28,9 +28,20 @@ export const Wrapper = styled.div`
 export const H1 = styled.h1`
   font-size: 120px;
   font-weight: 500;
+  margin: 0;
 
   @media (max-width: 600px) {
     font-size: 60px;
+  }
+`;
+
+export const H2 = styled.h1`
+  font-size: 60px;
+  font-weight: 500;
+  margin: 0;
+
+  @media (max-width: 600px) {
+    font-size: 40px;
   }
 `;
 
@@ -42,4 +53,10 @@ export const P = styled.p`
   @media (max-width: 600px) {
     font-size: 20px;
   }
+`;
+
+export const Box = styled.div`
+  border: 1px solid #000;
+  padding: 20px;
+  margin-bottom: 20px;
 `;

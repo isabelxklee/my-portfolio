@@ -1,12 +1,11 @@
 import React from "react";
-import { IntroContainer } from "./styles";
-import { P } from "../../styles";
+import { Box, P } from "../../styles";
 
 const Intro = () => (
-  <IntroContainer>
+  <Box>
     <P>internet-surfing, code-wrangling, non-binary software developer.</P>
     <P>BACKGROUND IN product design, EDUCATION, AND KICKING A**.</P>
-  </IntroContainer>
+  </Box>
 );
 
 export default Intro;
