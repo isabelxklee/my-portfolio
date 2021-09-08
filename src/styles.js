@@ -69,3 +69,8 @@ export const SectionHeader = styled(Box)`
   display: flex;
   justify-content: space-between;
 `;
+
+export const DisplayIcon = styled.button`
+  position: relative;
+  right: 0;
+`;

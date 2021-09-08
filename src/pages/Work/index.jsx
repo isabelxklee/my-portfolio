@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { SectionHeader, H2 } from "../../styles";
+import { SectionHeader, H2, DisplayIcon } from "../../styles";
 import sanityClient from "../../client.js";
 import Project from "../../components/Project";
-import { ProjectContainer, DisplayIcon } from "./styles";
+import { ProjectContainer } from "./styles";
 
 const Work = () => {
   const [projects, setProjects] = useState(null);

@@ -10,8 +10,3 @@ export const ProjectContainer = styled.div`
     grid-template-columns: 1fr;
   }
 `;
-
-export const DisplayIcon = styled.button`
-  position: relative;
-  right: 0;
-`;
