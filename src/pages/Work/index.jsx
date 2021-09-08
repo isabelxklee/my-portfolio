@@ -6,6 +6,7 @@ import { ProjectContainer, DisplayIcon } from "./styles";
 
 const Work = () => {
   const [projects, setProjects] = useState(null);
+  const [display, setDisplay] = useState(true);
 
   useEffect(() => {
     sanityClient
@@ -26,14 +27,23 @@ const Work = () => {
       .catch(console.error);
   }, []);
 
+  console.log(display);
+
+  const handleClick = () => {
+    setDisplay((display) => !display);
+  };
+
   return (
     <>
       <SectionHeader>
         <H2>work</H2>
-        <DisplayIcon>Hide</DisplayIcon>
+        <DisplayIcon onClick={handleClick}>
+          {display ? "Hide" : "Show"}
+        </DisplayIcon>
       </SectionHeader>
       <ProjectContainer>
         {projects &&
+          display &&
           projects.map((project) => (
             <Project project={project} key={project._id} />
           ))}
