@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Box, H2 } from "../../styles";
+import { SectionHeader, H2 } from "../../styles";
 import sanityClient from "../../client.js";
 import Project from "../../components/Project";
-import { ProjectContainer } from "./styles";
+import { ProjectContainer, DisplayIcon } from "./styles";
 
 const Work = () => {
   const [projects, setProjects] = useState(null);
@@ -28,9 +28,10 @@ const Work = () => {
 
   return (
     <>
-      <Box>
+      <SectionHeader>
         <H2>work</H2>
-      </Box>
+        <DisplayIcon>Hide</DisplayIcon>
+      </SectionHeader>
       <ProjectContainer>
         {projects &&
           projects.map((project) => (

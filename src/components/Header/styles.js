@@ -6,4 +6,8 @@ export const HeaderContainer = styled.div`
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: 10px;
+
+  @media (max-width: 850px) {
+    display: none;
+  }
 `;

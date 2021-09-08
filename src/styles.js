@@ -64,3 +64,8 @@ export const Box = styled.div`
 export const Space = styled.div`
   margin-top: 20px;
 `;
+
+export const SectionHeader = styled(Box)`
+  display: flex;
+  justify-content: space-between;
+`;
