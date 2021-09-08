@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Box, H2 } from "../../styles";
 import sanityClient from "../../client.js";
 import Project from "../../components/Project";
+import { ProjectContainer } from "./styles";
 
 const Work = () => {
   const [projects, setProjects] = useState(null);
@@ -29,11 +30,13 @@ const Work = () => {
     <>
       <Box>
         <H2>work</H2>
+      </Box>
+      <ProjectContainer>
         {projects &&
           projects.map((project) => (
             <Project project={project} key={project._id} />
           ))}
-      </Box>
+      </ProjectContainer>
     </>
   );
 };
