@@ -1,5 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
+import { ReactComponent as Icon1 } from "./assets/icon-show.svg";
+import { ReactComponent as Icon2 } from "./assets/icon-hide.svg";
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -70,7 +72,18 @@ export const SectionHeader = styled(Box)`
   justify-content: space-between;
 `;
 
-export const DisplayIcon = styled.button`
+export const ShowIcon = styled(Icon1)`
   position: relative;
   right: 0;
+`;
+
+export const HideIcon = styled(Icon2)`
+  position: relative;
+  right: 0;
+`;
+
+export const IconContainer = styled.button`
+  border: none;
+  background: transparent;
+  cursor: pointer;
 `;

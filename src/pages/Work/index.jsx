@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SectionHeader, H2, DisplayIcon } from "../../styles";
+import { SectionHeader, H2 } from "../../styles";
 import sanityClient from "../../client.js";
 import Project from "../../components/Project";
 import { ProjectContainer } from "./styles";
@@ -27,17 +27,17 @@ const Work = () => {
       .catch(console.error);
   }, []);
 
-  const handleClick = () => {
-    setDisplay((display) => !display);
-  };
+  // const handleClick = () => {
+  //   setDisplay((display) => !display);
+  // };
 
   return (
     <>
       <SectionHeader>
         <H2>work</H2>
-        <DisplayIcon onClick={handleClick}>
+        {/* <DisplayIcon onClick={handleClick}>
           {display ? "Hide" : "Show"}
-        </DisplayIcon>
+        </DisplayIcon> */}
       </SectionHeader>
       <ProjectContainer>
         {projects &&

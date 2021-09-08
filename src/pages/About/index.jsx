@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { SectionHeader, H2, P, Box, DisplayIcon } from "../../styles";
+import {
+  SectionHeader,
+  H2,
+  P,
+  Box,
+  ShowIcon,
+  HideIcon,
+  IconContainer,
+} from "../../styles";
 
 const About = () => {
   const [display, setDisplay] = useState(true);
@@ -12,9 +20,9 @@ const About = () => {
     <>
       <SectionHeader>
         <H2>about</H2>
-        <DisplayIcon onClick={handleClick}>
-          {display ? "Hide" : "Show"}
-        </DisplayIcon>
+        <IconContainer onClick={handleClick}>
+          {display ? <HideIcon /> : <ShowIcon />}
+        </IconContainer>
       </SectionHeader>
       {display && (
         <Box>
