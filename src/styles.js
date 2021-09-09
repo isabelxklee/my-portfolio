@@ -30,7 +30,7 @@ export const Wrapper = styled.div`
 export const H1 = styled.h1`
   font-size: 120px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 0.9;
   margin: 0;
 
   @media (max-width: 600px) {

@@ -6,7 +6,7 @@ export const HeaderContainer = styled.div`
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: 10px;
-  margin-bottom: 140px;
+  margin-bottom: 200px;
 
   @media (max-width: 850px) {
     display: none;
