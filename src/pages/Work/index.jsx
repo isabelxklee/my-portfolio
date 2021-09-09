@@ -34,7 +34,7 @@ const Work = () => {
 
   return (
     <>
-      <SectionHeader>
+      <SectionHeader id="work">
         <H2>work</H2>
         <ToggleDisplay display={display} handleClick={handleClick} />
       </SectionHeader>

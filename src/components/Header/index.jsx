@@ -5,12 +5,24 @@ import { StyledLink } from "../../styles";
 const Header = () => {
   return (
     <HeaderContainer>
-      <StyledLink to={"/"}>home</StyledLink>
-      <StyledLink to={"/work"}>work</StyledLink>
-      <StyledLink to={"/tech-writing"}>tech writing</StyledLink>
-      <StyledLink to={"/play"}>play</StyledLink>
-      <StyledLink to={"/about"}>about</StyledLink>
-      <StyledLink to={"/contact"}>contact</StyledLink>
+      <StyledLink smooth to={"/#top"}>
+        home
+      </StyledLink>
+      <StyledLink smooth to={"/#work"}>
+        work
+      </StyledLink>
+      <StyledLink smooth to={"/#tech-writing"}>
+        tech writing
+      </StyledLink>
+      <StyledLink smooth to={"/#play"}>
+        play
+      </StyledLink>
+      <StyledLink smooth to={"/#about"}>
+        about
+      </StyledLink>
+      <StyledLink smooth to={"/#contact"}>
+        contact
+      </StyledLink>
     </HeaderContainer>
   );
 };

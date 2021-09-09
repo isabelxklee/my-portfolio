@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { Link } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 import { ReactComponent as Icon1 } from "./assets/icon-show.svg";
 import { ReactComponent as Icon2 } from "./assets/icon-hide.svg";
 
@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(NavHashLink)`
   color: #000;
   text-decoration: none;
   font-size: 28px;
