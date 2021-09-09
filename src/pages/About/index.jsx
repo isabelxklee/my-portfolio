@@ -11,9 +11,9 @@ const About = () => {
 
   return (
     <>
-      <SectionHeader>
+      <SectionHeader id="about">
         <H2>about</H2>
-        <ToggleDisplay display={display} handleClick={handleClick} />
+        {/* <ToggleDisplay display={display} handleClick={handleClick} /> */}
       </SectionHeader>
       {display && (
         <Box>

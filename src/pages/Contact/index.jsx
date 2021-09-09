@@ -5,7 +5,7 @@ import { ContactItem, ContactContainer } from "./styles";
 const Contact = () => {
   return (
     <>
-      <SectionHeader>
+      <SectionHeader id="contact">
         <H2>contact</H2>
       </SectionHeader>
       <ContactContainer>
