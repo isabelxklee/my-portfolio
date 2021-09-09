@@ -58,6 +58,10 @@ export const P = styled.p`
   }
 `;
 
+export const SmallP = styled(P)`
+  font-size: 18px;
+`;
+
 export const SpaceP = styled(P)`
   &:not(:last-child) {
     margin-bottom: 20px;
