@@ -3,10 +3,15 @@ import { SectionHeader, H2 } from "../../styles";
 import sanityClient from "../../client.js";
 import Project from "../../components/Project";
 import { ProjectContainer } from "./styles";
+import ToggleDisplay from "../../components/ToggleDisplay";
 
 const Work = () => {
   const [projects, setProjects] = useState(null);
   const [display, setDisplay] = useState(true);
+
+  const handleClick = () => {
+    setDisplay((display) => !display);
+  };
 
   useEffect(() => {
     sanityClient
@@ -27,17 +32,11 @@ const Work = () => {
       .catch(console.error);
   }, []);
 
-  // const handleClick = () => {
-  //   setDisplay((display) => !display);
-  // };
-
   return (
     <>
       <SectionHeader>
         <H2>work</H2>
-        {/* <DisplayIcon onClick={handleClick}>
-          {display ? "Hide" : "Show"}
-        </DisplayIcon> */}
+        <ToggleDisplay display={display} handleClick={handleClick} />
       </SectionHeader>
       <ProjectContainer>
         {projects &&

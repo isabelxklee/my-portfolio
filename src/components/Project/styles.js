@@ -3,6 +3,10 @@ import { P } from "../../styles";
 
 export const Tag = styled(P)`
   color: red;
+
+  &:nth-child(even) {
+    color: blue;
+  }
 `;
 
 export const ProjectImage = styled.img`
