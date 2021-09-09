@@ -98,3 +98,14 @@ export const IconContainer = styled.button`
 export const Half = styled.div`
   width: 50%;
 `;
+
+export const Grid = styled.div`
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+`;
+
+export const ExternalLink = styled.a`
+  text-decoration: none;
+  color: #000;
+`;
