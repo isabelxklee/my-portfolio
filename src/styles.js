@@ -108,4 +108,9 @@ export const Grid = styled.div`
 export const ExternalLink = styled.a`
   text-decoration: none;
   color: #000;
+  transition: 0.3s;
+
+  &:hover {
+    color: red;
+  }
 `;
