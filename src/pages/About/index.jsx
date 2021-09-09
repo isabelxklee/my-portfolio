@@ -1,13 +1,6 @@
 import React, { useState } from "react";
-import {
-  SectionHeader,
-  H2,
-  P,
-  Box,
-  ShowIcon,
-  HideIcon,
-  IconContainer,
-} from "../../styles";
+import { SectionHeader, H2, P, Box } from "../../styles";
+import ToggleDisplay from "../../components/ToggleDisplay";
 
 const About = () => {
   const [display, setDisplay] = useState(true);
@@ -20,9 +13,7 @@ const About = () => {
     <>
       <SectionHeader>
         <H2>about</H2>
-        <IconContainer onClick={handleClick}>
-          {display ? <HideIcon /> : <ShowIcon />}
-        </IconContainer>
+        <ToggleDisplay display={display} handleClick={handleClick} />
       </SectionHeader>
       {display && (
         <Box>
