@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {H1} from '../../styles'
 import {Title} from './styles'
 import Intro from '../../components/Intro'
@@ -9,7 +9,7 @@ import Footer from '../../components/Footer'
 import sanityClient from '../../client.js'
 
 const Home = () => {
-    const [images, setImages] = useState([])
+  const [images, setImages] = useState([])
   
   useEffect(() => {
     sanityClient
@@ -17,7 +17,7 @@ const Home = () => {
         `*[_type == "imageAsset"] {
             _id,
             altText,
-            category,
+            "category": category[0]->title,
             image{
             asset->{
               url
@@ -29,7 +29,9 @@ const Home = () => {
       .catch(console.error)
   }, [])
 
-  console.log(images)
+  const filterImages = (string) => {
+    return images.filter((image) => image.category === string)
+  }
   
   return (
     <>
@@ -37,7 +39,7 @@ const Home = () => {
         <H1>isabel k. lee</H1>
         <H1>2021.</H1>
       </Title>
-      <Intro />
+      <Intro images={filterImages("Intro")} />
       <Work />
       <About />
       <Contact />
