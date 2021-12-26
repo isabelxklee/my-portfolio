@@ -11,6 +11,5 @@ export const IntroImage = styled(ProjectImage)`
 
 export const ImageContainer = styled.div`
   height: 300px;
-  margin: 40px;
-  position: relative;
+  padding: 80px 40px;
 `
