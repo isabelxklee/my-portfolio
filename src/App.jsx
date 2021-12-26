@@ -1,6 +1,6 @@
 import Home from './pages/Home'
 import {BrowserRouter, Route} from 'react-router-dom'
-import Header from './components/Header'
+// import Header from './components/Header'
 import {GlobalStyle, Wrapper} from './styles'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <>
       <GlobalStyle />
       <BrowserRouter>
-        <Header />
+        {/* <Header /> */}
         <Wrapper>
           <Route component={Home} path="/" exact />
           {/* <Route component={Post} path="/:slug" /> */}
