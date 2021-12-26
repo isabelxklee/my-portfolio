@@ -11,7 +11,7 @@ const Intro = () => {
         `*[_type == "imageAsset"] {
             _id,
             altText,
-            location,
+            category,
             image{
             asset->{
               url
