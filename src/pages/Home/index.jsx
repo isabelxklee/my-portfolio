@@ -6,8 +6,31 @@ import Work from '../Work'
 import About from '../About'
 import Contact from '../Contact'
 import Footer from '../../components/Footer'
+import sanityClient from '../../client.js'
 
 const Home = () => {
+    const [images, setImages] = useState([])
+  
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "imageAsset"] {
+            _id,
+            altText,
+            category,
+            image{
+            asset->{
+              url
+            }
+          }
+        }`
+      )
+      .then((data) => setImages(data))
+      .catch(console.error)
+  }, [])
+
+  console.log(images)
+  
   return (
     <>
       <Title>

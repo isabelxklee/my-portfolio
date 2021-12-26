@@ -4,26 +4,6 @@ import {IntroImage1, IntroImage2, IntroImage3, ImageContainer} from './styles'
 import sanityClient from '../../client.js'
 
 const Intro = () => {
-  const [images, setImages] = useState([])
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "imageAsset"] {
-            _id,
-            altText,
-            category,
-            image{
-            asset->{
-              url
-            }
-          }
-        }`
-      )
-      .then((data) => setImages(data))
-      .catch(console.error)
-  }, [])
-
-  console.log(images)
 
   return (
     <Box>
