@@ -52,6 +52,8 @@ export const P = styled.p`
   font-size: 24px;
   font-weight: 400;
   margin: 0;
+  position: ${({$position}) => $position};
+  z-index: ${({$zIndex}) => $zIndex};
 
   @media (max-width: 600px) {
     font-size: 20px;

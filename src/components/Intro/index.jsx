@@ -7,7 +7,7 @@ const Intro = ({images}) => {
 
   return (
     <Box>
-      <P>internet-surfing, code-wrangling, non-binary software developer.</P>
+      <P $position="relative" $zIndex={1}>internet-surfing, code-wrangling, non-binary software developer.</P>
       <ImageContainer>
         {images && images.map((image) => <IntroImage key={image._id} src={image.image.asset.url} alt={image.altText} $right={Math.random() * -5} $bottom={Math.random() * 50} />)}
       </ImageContainer>
