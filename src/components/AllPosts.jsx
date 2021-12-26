@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import sanityClient from "../client.js";
-import { Link } from "react-router-dom";
+import React, {useState, useEffect} from 'react'
+import sanityClient from '../client.js'
+import {Link} from 'react-router-dom'
 
 const AllPosts = () => {
-  const [posts, setPosts] = useState(null);
+  const [posts, setPosts] = useState(null)
 
   useEffect(() => {
     sanityClient
@@ -20,10 +20,10 @@ const AllPosts = () => {
     }`
       )
       .then((data) => setPosts(data))
-      .catch(console.error);
-  }, []);
+      .catch(console.error)
+  }, [])
 
-  console.log(posts);
+  console.log(posts)
 
   return (
     <div>
@@ -32,7 +32,7 @@ const AllPosts = () => {
       <div>
         {posts &&
           posts.map((post, index) => (
-            <Link to={"/" + post.slug.current} key={post.slug.current}>
+            <Link to={'/' + post.slug.current} key={post.slug.current}>
               <span key={index}>
                 <img src={post.mainImage.asset.url} alt="" />
                 <span>
@@ -43,7 +43,7 @@ const AllPosts = () => {
           ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AllPosts;
+export default AllPosts

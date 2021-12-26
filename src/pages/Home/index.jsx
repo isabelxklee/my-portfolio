@@ -1,11 +1,11 @@
-import React from "react";
-import { H1 } from "../../styles";
-import { Title } from "./styles";
-import Intro from "../../components/Intro";
-import Work from "../Work";
-import About from "../About";
-import Contact from "../Contact";
-import Footer from "../../components/Footer";
+import React from 'react'
+import {H1} from '../../styles'
+import {Title} from './styles'
+import Intro from '../../components/Intro'
+import Work from '../Work'
+import About from '../About'
+import Contact from '../Contact'
+import Footer from '../../components/Footer'
 
 const Home = () => {
   return (
@@ -20,6 +20,6 @@ const Home = () => {
       <Contact />
       <Footer />
     </>
-  );
-};
-export default Home;
+  )
+}
+export default Home

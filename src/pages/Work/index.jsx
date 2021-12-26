@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { SectionHeader, H2 } from "../../styles";
-import sanityClient from "../../client.js";
-import Project from "../../components/Project";
-import { ProjectContainer } from "./styles";
-import ToggleDisplay from "../../components/ToggleDisplay";
+import React, {useState, useEffect} from 'react'
+import {SectionHeader, H2} from '../../styles'
+import sanityClient from '../../client.js'
+import Project from '../../components/Project'
+import {ProjectContainer} from './styles'
+import ToggleDisplay from '../../components/ToggleDisplay'
 
 const Work = () => {
-  const [projects, setProjects] = useState(null);
-  const [display, setDisplay] = useState(true);
+  const [projects, setProjects] = useState(null)
+  const [display, setDisplay] = useState(true)
 
   const handleClick = () => {
-    setDisplay((display) => !display);
-  };
+    setDisplay((display) => !display)
+  }
 
   useEffect(() => {
     sanityClient
@@ -29,8 +29,8 @@ const Work = () => {
       }`
       )
       .then((data) => setProjects(data))
-      .catch(console.error);
-  }, []);
+      .catch(console.error)
+  }, [])
 
   return (
     <>
@@ -41,11 +41,9 @@ const Work = () => {
       <ProjectContainer>
         {projects &&
           display &&
-          projects.map((project) => (
-            <Project project={project} key={project._id} />
-          ))}
+          projects.map((project) => <Project project={project} key={project._id} />)}
       </ProjectContainer>
     </>
-  );
-};
-export default Work;
+  )
+}
+export default Work

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { P } from "../../styles";
+import styled from 'styled-components'
+import {P} from '../../styles'
 
 export const Tag = styled(P)`
   color: red;
@@ -7,7 +7,7 @@ export const Tag = styled(P)`
   &:nth-child(even) {
     color: blue;
   }
-`;
+`
 
 export const ProjectImage = styled.img`
   border: 1px solid #000;
@@ -22,4 +22,4 @@ export const ProjectImage = styled.img`
   @media (max-width: 600px) {
     height: 300px;
   }
-`;
+`

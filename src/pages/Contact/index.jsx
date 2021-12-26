@@ -1,6 +1,6 @@
-import React from "react";
-import { SectionHeader, H2, ExternalLink } from "../../styles";
-import { ContactItem, ContactContainer } from "./styles";
+import React from 'react'
+import {SectionHeader, H2, ExternalLink} from '../../styles'
+import {ContactItem, ContactContainer} from './styles'
 
 const Contact = () => {
   return (
@@ -10,20 +10,12 @@ const Contact = () => {
       </SectionHeader>
       <ContactContainer>
         <ContactItem>
-          <ExternalLink
-            href="mailto:hi@kleetime.com"
-            rel="nolink_referrer"
-            target="_blank"
-          >
+          <ExternalLink href="mailto:hi@kleetime.com" rel="nolink_referrer" target="_blank">
             Email
           </ExternalLink>
         </ContactItem>
         <ContactItem>
-          <ExternalLink
-            href="https://github.com/isabelxklee"
-            rel="nolink_referrer"
-            target="_blank"
-          >
+          <ExternalLink href="https://github.com/isabelxklee" rel="nolink_referrer" target="_blank">
             GitHub
           </ExternalLink>
         </ContactItem>
@@ -38,7 +30,7 @@ const Contact = () => {
         </ContactItem>
       </ContactContainer>
     </>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

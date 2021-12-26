@@ -1,12 +1,10 @@
-import React from "react";
-import { IconContainer, ShowIcon, HideIcon } from "../../styles";
+import React from 'react'
+import {IconContainer, ShowIcon, HideIcon} from '../../styles'
 
-const ToggleDisplay = ({ display, handleClick }) => {
+const ToggleDisplay = ({display, handleClick}) => {
   return (
-    <IconContainer onClick={handleClick}>
-      {display ? <HideIcon /> : <ShowIcon />}
-    </IconContainer>
-  );
-};
+    <IconContainer onClick={handleClick}>{display ? <HideIcon /> : <ShowIcon />}</IconContainer>
+  )
+}
 
-export default ToggleDisplay;
+export default ToggleDisplay

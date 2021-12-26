@@ -8,10 +8,16 @@ export default {
       title: 'Title',
       type: 'string',
     },
-        {
+    {
       name: 'altText',
       title: 'Alt Text',
       type: 'string',
+    },
+    {
+      name: 'categories',
+      title: 'Categories',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'category'}}],
     },
     {
       name: 'image',

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Grid } from "../../styles";
+import styled from 'styled-components'
+import {Grid} from '../../styles'
 
 export const ProjectContainer = styled(Grid)`
   grid-template-columns: repeat(2, 1fr);
@@ -7,4 +7,4 @@ export const ProjectContainer = styled(Grid)`
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
   }
-`;
+`
