@@ -11,4 +11,6 @@ export const ContactContainer = styled(Grid)`
 
 export const ContactItem = styled(Box)`
   height: 140px;
+  cursor: pointer;
+  position: relative;
 `

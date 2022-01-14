@@ -126,6 +126,9 @@ export const ExternalLink = styled.a`
   text-decoration: none;
   color: #000;
   transition: 0.3s;
+  position: ${({$contact}) => ($contact ? 'absolute' : 'unset')};
+  width: 100%;
+  height: 100%;
 
   &:hover {
     color: red;

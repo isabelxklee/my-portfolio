@@ -10,12 +10,22 @@ const Contact = () => {
       </SectionHeader>
       <ContactContainer>
         <ContactItem>
-          <ExternalLink href="mailto:hi@kleetime.com" rel="nolink_referrer" target="_blank">
+          <ExternalLink
+            href="mailto:hi@kleetime.com"
+            rel="nolink_referrer"
+            target="_blank"
+            $contact={true}
+          >
             Email
           </ExternalLink>
         </ContactItem>
         <ContactItem>
-          <ExternalLink href="https://github.com/isabelxklee" rel="nolink_referrer" target="_blank">
+          <ExternalLink
+            href="https://github.com/isabelxklee"
+            rel="nolink_referrer"
+            target="_blank"
+            $contact={true}
+          >
             GitHub
           </ExternalLink>
         </ContactItem>
@@ -24,6 +34,7 @@ const Contact = () => {
             href="https://www.linkedin.com/in/isabelklee/"
             rel="nolink_referrer"
             target="_blank"
+            $contact={true}
           >
             LinkedIn
           </ExternalLink>
