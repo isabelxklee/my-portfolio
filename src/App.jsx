@@ -11,8 +11,6 @@ const App = () => {
     setColors(ColorCombos[randomIndex])
   }
 
-  console.log(colors['color'], colors['backgroundColor'])
-
   return (
     <>
       <GlobalStyle $color={colors['color']} $backgroundColor={colors['backgroundColor']} />

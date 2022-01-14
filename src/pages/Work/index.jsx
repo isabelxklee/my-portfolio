@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {SectionHeader, H2} from '../../styles'
+// import {SectionHeader, H2} from '../../styles'
 import sanityClient from '../../client.js'
 import Project from '../../components/Project'
 import {ProjectContainer} from './styles'
@@ -34,10 +34,7 @@ const Work = () => {
 
   return (
     <>
-      <SectionHeader id="work">
-        <H2>work</H2>
-        <ToggleDisplay display={display} handleClick={handleClick} />
-      </SectionHeader>
+      <ToggleDisplay display={display} handleClick={handleClick} title={'work'} />
       <ProjectContainer>
         {projects &&
           display &&

@@ -93,6 +93,7 @@ export const Space = styled.div`
 export const SectionHeader = styled(Box)`
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 `
 
 export const ShowIcon = styled(Icon1)`
