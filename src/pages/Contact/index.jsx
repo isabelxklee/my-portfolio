@@ -26,8 +26,6 @@ const Contact = () => {
     setDisplay((display) => !display)
   }
 
-  console.log(links)
-
   return (
     <>
       <ToggleSection display={display} handleClick={handleClick} title={'contact'} />
