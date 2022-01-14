@@ -132,4 +132,5 @@ export const Circle = styled.div`
   height: 50px;
   width: 50px;
   border-radius: 100%;
+  background-color: black;
 `

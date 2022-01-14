@@ -32,8 +32,6 @@ const Work = () => {
       .catch(console.error)
   }, [])
 
-  console.log(projects)
-
   return (
     <>
       <SectionHeader id="work">

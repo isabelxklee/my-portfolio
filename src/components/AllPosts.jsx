@@ -23,8 +23,6 @@ const AllPosts = () => {
       .catch(console.error)
   }, [])
 
-  console.log(posts)
-
   return (
     <div>
       <h2>Blog Posts</h2>

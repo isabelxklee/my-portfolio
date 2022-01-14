@@ -4,13 +4,16 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import {GlobalStyle, Wrapper, ColorCombos, Circle} from './styles'
 
 const App = () => {
-  const [color, setColor] = useState(null)
+  const [colors, setColors] = useState(ColorCombos[0])
 
-  const handleClick = () => setColor(ColorCombos[0])
+  const handleClick = () => {
+    let randomIndex = Math.floor(Math.random() * ColorCombos.length)
+    setColors(ColorCombos[randomIndex])
+  }
 
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle $color={colors['color']} $background-color={colors['backgroundColor']} />
       <BrowserRouter>
         <Wrapper>
           <Circle onClick={handleClick} />

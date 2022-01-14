@@ -3,13 +3,22 @@ import {P, Box} from '../../styles'
 import {IntroImage, ImageContainer} from './styles'
 
 const Intro = ({images}) => {
-  console.log(images)
-
   return (
     <Box>
-      <P $position="relative" $zIndex={1}>internet-surfing, code-wrangling, non-binary software developer.</P>
+      <P $position="relative" $zIndex={1}>
+        internet-surfing, code-wrangling, non-binary software developer.
+      </P>
       <ImageContainer>
-        {images && images.map((image) => <IntroImage key={image._id} src={image.image.asset.url} alt={image.altText} $right={Math.random() * -5} $bottom={Math.random() * -10} />)}
+        {images &&
+          images.map((image) => (
+            <IntroImage
+              key={image._id}
+              src={image.image.asset.url}
+              alt={image.altText}
+              $right={Math.random() * -5}
+              $bottom={Math.random() * -10}
+            />
+          ))}
       </ImageContainer>
       <P>BACKGROUND IN product design, EDUCATION, AND KICKING A**.</P>
     </Box>
