@@ -1,16 +1,19 @@
+import {useState} from 'react'
 import Home from './pages/Home'
 import {BrowserRouter, Route} from 'react-router-dom'
-import {GlobalStyle, Wrapper} from './styles'
-import ColorChanger from './components/ColorChanger'
+import {GlobalStyle, Wrapper, ColorCombos, Circle} from './styles'
 
 const App = () => {
+  const [color, setColor] = useState(null)
+
+  const handleClick = () => setColor(ColorCombos[0])
+
   return (
     <>
       <GlobalStyle />
       <BrowserRouter>
-        {/* <Header /> */}
         <Wrapper>
-          <ColorChanger />
+          <Circle onClick={handleClick} />
           <Route component={Home} path="/" exact />
           {/* <Route component={Post} path="/:slug" /> */}
         </Wrapper>

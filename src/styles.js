@@ -3,6 +3,13 @@ import {NavHashLink} from 'react-router-hash-link'
 import {ReactComponent as Icon1} from './assets/icon-show.svg'
 import {ReactComponent as Icon2} from './assets/icon-hide.svg'
 
+export const ColorCombos = [
+  {color: '282828', backgroundColor: 'ECD2BB'},
+  {color: 'D10000', backgroundColor: 'F4C7B9'},
+  {color: 'DBFF00', backgroundColor: '94A9DF'},
+  {color: 'C56A00', backgroundColor: 'F4F2EB'},
+]
+
 export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
@@ -119,4 +126,10 @@ export const ExternalLink = styled.a`
   &:hover {
     color: red;
   }
+`
+
+export const Circle = styled.div`
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
 `
