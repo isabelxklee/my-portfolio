@@ -18,7 +18,7 @@ const App = () => {
       <GlobalStyle $color={colors['color']} $backgroundColor={colors['backgroundColor']} />
       <BrowserRouter>
         <Wrapper>
-          <Circle onClick={handleClick} />
+          <Circle onClick={handleClick} $color={colors['color']} />
           <Route component={Home} path="/" exact />
           {/* <Route component={Post} path="/:slug" /> */}
         </Wrapper>
