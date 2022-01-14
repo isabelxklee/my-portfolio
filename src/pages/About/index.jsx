@@ -3,7 +3,7 @@ import {SpaceP, Box, Half} from '../../styles'
 import ToggleSection from '../../components/ToggleSection'
 
 const About = () => {
-  const [display, setDisplay] = useState(true)
+  const [display, setDisplay] = useState(false)
 
   const handleClick = () => {
     setDisplay((display) => !display)

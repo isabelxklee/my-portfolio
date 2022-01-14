@@ -6,7 +6,7 @@ import ToggleSection from '../../components/ToggleSection'
 
 const Work = () => {
   const [projects, setProjects] = useState(null)
-  const [display, setDisplay] = useState(true)
+  const [display, setDisplay] = useState(false)
 
   const handleClick = () => {
     setDisplay((display) => !display)
