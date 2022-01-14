@@ -2,7 +2,6 @@
 
 ![portfolio crop](https://user-images.githubusercontent.com/52360534/147395617-7327b2d9-16f7-48f7-a62e-62ba7f523802.png)
 
-
 ## Getting started
 
 1. Install [Node.js](https://www.npmjs.com/get-npm).

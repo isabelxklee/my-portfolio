@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default {
   name: "project",
   title: "Project",
@@ -32,8 +33,8 @@ export default {
       of: [{ type: "reference", to: { type: "tag" } }],
     },
     {
-      name: "publishedAt",
-      title: "Published at",
+      name: "date",
+      title: "Date",
       type: "datetime",
     },
     {

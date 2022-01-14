@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
   border: 1px solid #000;
@@ -14,4 +14,4 @@ export const HeaderContainer = styled.div`
   @media (max-width: 850px) {
     display: none;
   }
-`;
+`
