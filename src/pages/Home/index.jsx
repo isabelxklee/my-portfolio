@@ -40,7 +40,7 @@ const Home = () => {
         <H1>2022.</H1>
       </Title>
       <Intro images={filterImages('Intro')} />
-      <Work />
+      {/* <Work /> */}
       <About />
       <Contact />
       <Footer />
