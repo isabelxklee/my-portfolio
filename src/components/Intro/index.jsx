@@ -15,8 +15,8 @@ const Intro = ({images}) => {
               key={image._id}
               src={image.image.asset.url}
               alt={image.altText}
-              $right={Math.random() * -5}
-              $bottom={Math.random() * -10}
+              // $right={Math.random() * -5}
+              // $bottom={Math.random() * -10}
             />
           ))}
       </ImageContainer>
