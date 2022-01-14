@@ -115,6 +115,10 @@ export const IconContainer = styled.button`
 
 export const Half = styled.div`
   width: 50%;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `
 
 export const Grid = styled.div`

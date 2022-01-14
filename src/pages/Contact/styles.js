@@ -13,4 +13,9 @@ export const ContactItem = styled(Box)`
   height: 140px;
   cursor: pointer;
   position: relative;
+
+  @media (max-width: 900px) {
+    height: 40px;
+    margin-bottom: 0;
+  }
 `
