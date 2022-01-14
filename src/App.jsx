@@ -11,9 +11,11 @@ const App = () => {
     setColors(ColorCombos[randomIndex])
   }
 
+  console.log(colors['color'], colors['backgroundColor'])
+
   return (
     <>
-      <GlobalStyle $color={colors['color']} $background-color={colors['backgroundColor']} />
+      <GlobalStyle $color={colors['color']} $backgroundColor={colors['backgroundColor']} />
       <BrowserRouter>
         <Wrapper>
           <Circle onClick={handleClick} />

@@ -17,6 +17,8 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     font-family: "Helvetica Neue", "sans-serif";
     text-transform: uppercase;
+    color: ${({$color}) => `#${$color}`};
+    background-color: ${({$backgroundColor}) => `#${$backgroundColor}`}
   }
 `
 
