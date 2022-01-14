@@ -1,50 +1,44 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {ExternalLink} from '../../styles'
 import {ContactItem, ContactContainer} from './styles'
 import ToggleSection from '../../components/ToggleSection'
+import sanityClient from '../../client.js'
 
 const Contact = () => {
   const [display, setDisplay] = useState(false)
+  const [links, setLinks] = useState([])
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "link" && category[0]->title == "Contact"] {
+            _id,
+            title,
+            url,
+            "category": category[0]->title,
+        }`
+      )
+      .then((data) => setLinks(data))
+      .catch(console.error)
+  }, [])
 
   const handleClick = () => {
     setDisplay((display) => !display)
   }
+
   return (
     <>
       <ToggleSection display={display} handleClick={handleClick} title={'contact'} />
       {display && (
         <>
           <ContactContainer>
-            <ContactItem>
-              <ExternalLink
-                href="mailto:hi@kleetime.com"
-                rel="nolink_referrer"
-                target="_blank"
-                $contact={true}
-              >
-                Email
-              </ExternalLink>
-            </ContactItem>
-            <ContactItem>
-              <ExternalLink
-                href="https://github.com/isabelxklee"
-                rel="nolink_referrer"
-                target="_blank"
-                $contact={true}
-              >
-                GitHub
-              </ExternalLink>
-            </ContactItem>
-            <ContactItem>
-              <ExternalLink
-                href="https://www.linkedin.com/in/isabelklee/"
-                rel="nolink_referrer"
-                target="_blank"
-                $contact={true}
-              >
-                LinkedIn
-              </ExternalLink>
-            </ContactItem>
+            {links.map((link) => (
+              <ContactItem key={link._id}>
+                <ExternalLink href={link.url} rel="nolink_referrer" target="_blank" $contact={true}>
+                  {link.title}
+                </ExternalLink>
+              </ContactItem>
+            ))}
           </ContactContainer>
         </>
       )}
