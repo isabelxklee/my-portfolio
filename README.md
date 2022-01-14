@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4cddb7c5-b587-4bb9-b416-5398b776051b/deploy-status)](https://app.netlify.com/sites/kleetime/deploys)
+
 # My Portfolio ⚫️
 
 ![portfolio crop](https://user-images.githubusercontent.com/52360534/147395617-7327b2d9-16f7-48f7-a62e-62ba7f523802.png)
