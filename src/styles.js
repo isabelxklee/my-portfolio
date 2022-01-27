@@ -4,7 +4,7 @@ import {ReactComponent as Icon1} from './assets/icon-show.svg'
 import {ReactComponent as Icon2} from './assets/icon-hide.svg'
 
 export const ColorCombos = [
-  {color: '#282828', backgroundColor: '#E0B792'},
+  {color: '#FE4C00', backgroundColor: '#F3E8DD'},
   {color: '#D10000', backgroundColor: '#F4C7B9'},
   {color: '#C56A00', backgroundColor: '#F4F2EB'},
 ]
