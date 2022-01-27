@@ -5,7 +5,7 @@ import {ReactComponent as Icon2} from './assets/icon-hide.svg'
 
 export const Colors = {
   peach: '#F3E8DD',
-  red: '#FE4C00',
+  red: '#FD4A00',
 }
 
 export const GlobalStyle = createGlobalStyle`
