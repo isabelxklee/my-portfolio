@@ -12,6 +12,19 @@ export const TitleImage = styled.img`
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
+`
+
+export const TitleImageContainer = styled.div`
+  span {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &:hover span {
+    display: block;
+  }
 `
 
 export const DoodleComputer = styled.img`

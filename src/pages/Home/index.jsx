@@ -1,5 +1,14 @@
 import React from 'react' // {useState, useEffect}
-import {Title, TitleImage, DoodleComputer, DoodleGlasses, DoodleHat, DoodleRat} from './styles'
+import {H1} from '../../styles'
+import {
+  Title,
+  TitleImage,
+  TitleImageContainer,
+  DoodleComputer,
+  DoodleGlasses,
+  DoodleHat,
+  DoodleRat,
+} from './styles'
 // import Work from '../Work'
 import About from '../About'
 import Contact from '../Contact'
@@ -40,12 +49,17 @@ const Home = () => {
   return (
     <>
       <Title>
-        <h1 style={{opacity: 0, margin: 0}}>Isabel K. Lee</h1>
+        {/* <h1 style={{opacity: 0, margin: 0}}>Isabel K. Lee</h1> */}
         <DoodleComputer src={doodleComputer} alt="" />
         <DoodleGlasses src={doodleGlasses} alt="" />
         <DoodleHat src={doodleHat} alt="" />
         <DoodleRat src={doodleRat} alt="" />
-        <TitleImage src={nameImage} alt="Isabel K. Lee" />
+        <TitleImageContainer className="title-image-container">
+          <TitleImage src={nameImage} alt="Isabel K. Lee" />
+          <span>
+            <H1>Welcome to Klee Time!</H1>
+          </span>
+        </TitleImageContainer>
       </Title>
       {/* <Intro images={filterImages('Intro')} /> */}
       {/* <Work /> */}
