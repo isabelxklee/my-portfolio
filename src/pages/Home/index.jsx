@@ -40,8 +40,8 @@ const Home = () => {
   return (
     <>
       <Title>
+        <h1 style={{opacity: 0, margin: 0}}>Isabel K. Lee</h1>
         <TitleImage src={nameImage} alt="Isabel K. Lee" />
-        {/* <H1>Isabel K. Lee</H1> */}
       </Title>
       {/* <Intro images={filterImages('Intro')} /> */}
       {/* <Work /> */}
