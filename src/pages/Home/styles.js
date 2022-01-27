@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Colors} from '../../styles'
 
 export const Title = styled.div`
   position: relative;
@@ -50,4 +51,11 @@ export const DoodleRat = styled(DoodleComputer)`
   left: unset;
   right: 15%;
   top: 45%;
+`
+
+export const WelcomeMessage = styled.h1`
+  font-size: 60px;
+  position: fixed;
+  color: ${Colors.peach};
+  text-shadow: 1px 1px 15px ${Colors.red}, 1px 1px 15px ${Colors.red};
 `
