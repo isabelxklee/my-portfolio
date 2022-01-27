@@ -54,6 +54,8 @@ export const DoodleRat = styled(DoodleComputer)`
 `
 
 export const WelcomeMessage = styled.h1`
+  font-family: 'Helvetica Neue', 'sans-serif';
+  text-transform: uppercase;
   font-size: 80px;
   position: fixed;
   bottom: 40%;

@@ -21,8 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     text-rendering: optimizeLegibility;
-    font-family: "Bluu Next", "erif";
-    text-transform: uppercase;
+    font-family: "Bluu Next", "serif";
     color: ${Colors.red};
     background-color: ${Colors.peach};
   }
