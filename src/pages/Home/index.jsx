@@ -1,5 +1,5 @@
 import React from 'react' // {useState, useEffect}
-import {Title, TitleImage, DoodleComputer, DoodleGlasses, DoodleHat} from './styles'
+import {Title, TitleImage, DoodleComputer, DoodleGlasses, DoodleHat, DoodleRat} from './styles'
 // import Work from '../Work'
 import About from '../About'
 import Contact from '../Contact'
@@ -9,6 +9,7 @@ import nameImage from '../../assets/name-image.png'
 import doodleComputer from '../../assets/doodle_computer.png'
 import doodleGlasses from '../../assets/doodle_glasses.png'
 import doodleHat from '../../assets/doodle_hat.png'
+import doodleRat from '../../assets/doodle_rat.png'
 
 const Home = () => {
   // const [images, setImages] = useState([])
@@ -43,6 +44,7 @@ const Home = () => {
         <DoodleComputer src={doodleComputer} alt="" />
         <DoodleGlasses src={doodleGlasses} alt="" />
         <DoodleHat src={doodleHat} alt="" />
+        <DoodleRat src={doodleRat} alt="" />
         <TitleImage src={nameImage} alt="Isabel K. Lee" />
       </Title>
       {/* <Intro images={filterImages('Intro')} /> */}

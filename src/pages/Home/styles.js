@@ -6,7 +6,7 @@ export const Title = styled.div`
 `
 
 export const TitleImage = styled.img`
-  width: 50%;
+  width: 700px;
   display: block;
   position: absolute;
   top: 35%;
@@ -30,4 +30,11 @@ export const DoodleGlasses = styled(DoodleComputer)`
 export const DoodleHat = styled(DoodleComputer)`
   top: 55%;
   left: 10%;
+  width: 150px;
+`
+
+export const DoodleRat = styled(DoodleComputer)`
+  left: unset;
+  right: 15%;
+  top: 45%;
 `
