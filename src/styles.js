@@ -3,13 +3,10 @@ import {NavHashLink} from 'react-router-hash-link'
 import {ReactComponent as Icon1} from './assets/icon-show.svg'
 import {ReactComponent as Icon2} from './assets/icon-hide.svg'
 
-export const ColorCombos = [
-  {color: '#FE4C00', backgroundColor: '#F3E8DD'},
-  {color: '#D10000', backgroundColor: '#F4C7B9'},
-  {color: '#C56A00', backgroundColor: '#F4F2EB'},
-]
-
-// {color: '#BCF1DB', backgroundColor: '#19168C'},
+export const Colors = {
+  peach: '#F3E8DD',
+  red: '#FE4C00',
+}
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -18,9 +15,8 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     font-family: "Helvetica Neue", "sans-serif";
     text-transform: uppercase;
-    color: ${({$color}) => $color};
-    background-color: ${({$backgroundColor}) => $backgroundColor};
-    transition: 0.3s;
+    color: ${Colors.red};
+    background-color: ${Colors.peach};
   }
 `
 

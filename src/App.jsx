@@ -4,21 +4,21 @@ import {BrowserRouter, Route} from 'react-router-dom'
 import {GlobalStyle, Wrapper, ColorCombos, Circle} from './styles'
 
 const App = () => {
-  const [colorIndex, setColorIndex] = useState(0)
+  // const [colorIndex, setColorIndex] = useState(0)
 
-  const handleClick = () => {
-    setColorIndex((colorIndex) => (colorIndex === ColorCombos.length - 1 ? 0 : (colorIndex += 1)))
-  }
+  // const handleClick = () => {
+  //   setColorIndex((colorIndex) => (colorIndex === ColorCombos.length - 1 ? 0 : (colorIndex += 1)))
+  // }
 
   return (
     <>
       <GlobalStyle
-        $color={ColorCombos[colorIndex]['color']}
-        $backgroundColor={ColorCombos[colorIndex]['backgroundColor']}
+      // $color={ColorCombos[colorIndex]['color']}
+      // $backgroundColor={ColorCombos[colorIndex]['backgroundColor']}
       />
       <BrowserRouter>
         <Wrapper>
-          <Circle onClick={handleClick} $color={ColorCombos[colorIndex]['color']} />
+          {/* <Circle onClick={handleClick} $color={ColorCombos[colorIndex]['color']} /> */}
           <Route component={Home} path="/" exact />
           {/* <Route component={Post} path="/:slug" /> */}
         </Wrapper>
