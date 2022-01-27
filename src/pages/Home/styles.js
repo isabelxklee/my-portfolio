@@ -54,8 +54,10 @@ export const DoodleRat = styled(DoodleComputer)`
 `
 
 export const WelcomeMessage = styled.h1`
-  font-size: 60px;
+  font-size: 80px;
   position: fixed;
+  bottom: 40%;
+  width: 50%;
   color: ${Colors.peach};
   text-shadow: 1px 1px 15px ${Colors.red}, 1px 1px 15px ${Colors.red};
 `

@@ -2,6 +2,7 @@ import styled, {createGlobalStyle} from 'styled-components'
 import {NavHashLink} from 'react-router-hash-link'
 import {ReactComponent as Icon1} from './assets/icon-show.svg'
 import {ReactComponent as Icon2} from './assets/icon-hide.svg'
+import bluuNext from './assets/bluunext-titling.woff'
 
 export const Colors = {
   peach: '#F3E8DD',
@@ -9,11 +10,18 @@ export const Colors = {
 }
 
 export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Bluu Next';
+    font-style: normal;
+    font-weight: 400;
+    src: url(${bluuNext}) format('woff')
+  }
+
   body {
     margin: 0;
     padding: 0;
     text-rendering: optimizeLegibility;
-    font-family: "Helvetica Neue", "sans-serif";
+    font-family: "Bluu Next", "erif";
     text-transform: uppercase;
     color: ${Colors.red};
     background-color: ${Colors.peach};
