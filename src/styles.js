@@ -96,11 +96,19 @@ export const SectionHeader = styled(Box)`
 export const ShowIcon = styled(Icon1)`
   position: relative;
   right: 0;
+
+  path {
+    fill: ${Colors.red};
+  }
 `
 
 export const HideIcon = styled(Icon2)`
   position: relative;
   right: 0;
+
+  path {
+    fill: ${Colors.red};
+  }
 `
 
 export const IconContainer = styled.button`
