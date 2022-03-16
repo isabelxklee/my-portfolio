@@ -34,7 +34,7 @@ export default {
   orderings: [
     {
       title: 'Date, Latest',
-      name: 'latestDate',
+      name: 'dateDesc',
       by: [{field: 'date', direction: 'desc'}],
     },
   ],

@@ -11,7 +11,7 @@ const Press = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "press"] {
+        `*[_type == "press"] | order(date desc) {
             _id,
             title,
             url,
