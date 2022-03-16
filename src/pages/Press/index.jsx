@@ -1,13 +1,32 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import ToggleSection from '../../components/ToggleSection'
+import sanityClient from '../../client.js'
 
 const Press = () => {
   const [pressItems, setPressItems] = useState(null)
   const [display, setDisplay] = useState(false)
 
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "press"] {
+            _id,
+            title,
+            url,
+            'tag': tags[0]->title,
+            date,
+            source
+        }`
+      )
+      .then((data) => setPressItems(data))
+      .catch(console.error)
+  }, [])
+
   const handleClick = () => {
     setDisplay((display) => !display)
   }
+
+  console.log(pressItems)
 
   return (
     <>
