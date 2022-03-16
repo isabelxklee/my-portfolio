@@ -20,6 +20,10 @@ export const PressItem = styled(Box)`
 
   @media (max-width: 900px) {
     margin-bottom: 0;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
   }
 `
 

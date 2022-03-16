@@ -10,6 +10,21 @@ export default {
       type: 'string',
     },
     {
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+    },
+    {
+      name: 'url',
+      title: 'URL',
+      type: 'url',
+    },
+    {
+      name: 'code',
+      title: 'Code',
+      type: 'url',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -22,9 +37,6 @@ export default {
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
-      options: {
-        hotspot: true,
-      },
     },
     {
       name: 'tags',
@@ -40,7 +52,8 @@ export default {
     {
       name: 'body',
       title: 'Body',
-      type: 'text',
+      type: 'array',
+      of: [{type: 'block'}],
     },
   ],
 
