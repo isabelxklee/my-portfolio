@@ -3,11 +3,11 @@ import {NavHashLink} from 'react-router-hash-link'
 import {ReactComponent as Icon1} from './assets/icon-show.svg'
 import {ReactComponent as Icon2} from './assets/icon-hide.svg'
 
-export const ColorCombos = [
-  {color: '#282828', backgroundColor: '#E0B792'},
-  {color: '#D10000', backgroundColor: '#F4C7B9'},
-  {color: '#C56A00', backgroundColor: '#F4F2EB'},
-]
+// export const ColorCombos = [
+//   {color: '#282828', backgroundColor: '#E0B792'},
+//   {color: '#D10000', backgroundColor: '#F4C7B9'},
+//   {color: '#C56A00', backgroundColor: '#F4F2EB'},
+// ]
 
 export const Colors = {
   red: '#D10000',
@@ -21,8 +21,8 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     font-family: "Helvetica Neue", "sans-serif";
     text-transform: uppercase;
-    color: ${({$color}) => $color};
-    background-color: ${({$backgroundColor}) => $backgroundColor};
+    color: ${Colors.red};
+    background-color: ${Colors.pink};
     transition: 0.3s;
   }
 `
@@ -139,7 +139,7 @@ export const ExternalLink = styled.a`
   height: 100%;
 
   &:hover {
-    color: red;
+    color: ${Colors.red};
   }
 `
 
@@ -147,7 +147,7 @@ export const Circle = styled.div`
   height: 50px;
   width: 50px;
   border-radius: 100%;
-  background-color: ${({$color}) => $color};
+  background-color: ${Colors.red};
   cursor: pointer;
 `
 
