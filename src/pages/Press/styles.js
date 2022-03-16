@@ -10,6 +10,10 @@ export const PressContainer = styled(Grid)`
 `
 
 export const PressItem = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
   @media (max-width: 900px) {
     margin-bottom: 0;
   }
