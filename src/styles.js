@@ -14,7 +14,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     text-rendering: optimizeLegibility;
     font-family: "Helvetica Neue", "sans-serif";
-    /* text-transform: uppercase; */
     color: ${Colors.red};
     background-color: ${Colors.pink};
     transition: 0.3s;
