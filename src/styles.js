@@ -9,7 +9,10 @@ export const ColorCombos = [
   {color: '#C56A00', backgroundColor: '#F4F2EB'},
 ]
 
-// {color: '#BCF1DB', backgroundColor: '#19168C'},
+export const Colors = {
+  red: '#D10000',
+  pink: '#F4C7B9',
+}
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -146,4 +149,11 @@ export const Circle = styled.div`
   border-radius: 100%;
   background-color: ${({$color}) => $color};
   cursor: pointer;
+`
+
+export const Tag = styled.div`
+  border-radius: 4px;
+  border: none;
+  background-color: ${Colors.red};
+  color: ${Colors.pink};
 `
