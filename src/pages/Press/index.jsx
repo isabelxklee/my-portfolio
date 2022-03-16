@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import ToggleSection from '../../components/ToggleSection'
 import sanityClient from '../../client.js'
-import {PressContainer} from './styles'
+import {PressContainer, PressItem} from './styles'
 // import * as Styled from '../../styles'
 
 const Press = () => {
@@ -37,7 +37,7 @@ const Press = () => {
         <>
           <PressContainer>
             {pressItems.map((item) => (
-              <p>hello world</p>
+              <PressItem key={item._id}>hello world</PressItem>
             ))}
           </PressContainer>
         </>
