@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {SpaceP, Box, Half} from '../../styles'
 import ToggleSection from '../../components/ToggleSection'
 import sanityClient from '../../client.js'
+import {PortableText} from '@portabletext/react'
 
 const About = () => {
   const [display, setDisplay] = useState(false)
@@ -29,10 +30,7 @@ const About = () => {
       {display && (
         <Box>
           <Half>
-            {aboutInfo &&
-              aboutInfo[0].content.map((text) => (
-                <SpaceP key={text._key}>{text.children[0].text}</SpaceP>
-              ))}
+            <SpaceP>{aboutInfo && <PortableText value={aboutInfo[0].content} />}</SpaceP>
           </Half>
         </Box>
       )}
