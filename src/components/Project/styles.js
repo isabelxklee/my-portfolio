@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {P} from '../../styles'
+import {P, Colors} from '../../styles'
 
 export const Tag = styled(P)`
   color: red;
@@ -10,7 +10,7 @@ export const Tag = styled(P)`
 `
 
 export const ProjectImage = styled.img`
-  border: 1px solid #000;
+  border: 1px solid ${Colors.red};
   width: 100%;
   height: 400px;
   object-fit: cover;
