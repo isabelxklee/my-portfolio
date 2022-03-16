@@ -9,8 +9,6 @@ const Press = () => {
     setDisplay((display) => !display)
   }
 
-  console.log(pressItems, setPressItems())
-
   return (
     <>
       <ToggleSection display={display} handleClick={handleClick} title={'press'} />
