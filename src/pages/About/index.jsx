@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import {SpaceP, Box, Half} from '../../styles'
-import {AboutContainer, ImageContainer} from './styles'
+import {Box} from '../../styles'
+import {AboutContainer} from './styles'
 import ToggleSection from '../../components/ToggleSection'
 import sanityClient from '../../client.js'
 import BlockContent from '@sanity/block-content-to-react'
@@ -32,12 +32,6 @@ const About = () => {
         <Box>
           <AboutContainer>
             {aboutInfo && <BlockContent blocks={aboutInfo[0].content} />}
-            <ImageContainer>
-              <img
-                src="https://cdn.sanity.io/images/s4wyl5ch/production/e0808cc888cfaec54385c95db3e9214c602bd070-2886x2886.jpg"
-                alt=""
-              />
-            </ImageContainer>
           </AboutContainer>
         </Box>
       )}
