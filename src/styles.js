@@ -3,12 +3,6 @@ import {NavHashLink} from 'react-router-hash-link'
 import {ReactComponent as Icon1} from './assets/icon-show.svg'
 import {ReactComponent as Icon2} from './assets/icon-hide.svg'
 
-export const ColorCombos = [
-  {color: '#282828', backgroundColor: '#E0B792'},
-  {color: '#D10000', backgroundColor: '#F4C7B9'},
-  {color: '#C56A00', backgroundColor: '#F4F2EB'},
-]
-
 export const Colors = {
   red: '#D10000',
   pink: '#F4C7B9',
@@ -20,15 +14,14 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     text-rendering: optimizeLegibility;
     font-family: "Helvetica Neue", "sans-serif";
-    text-transform: uppercase;
-    color: ${({$color}) => $color};
-    background-color: ${({$backgroundColor}) => $backgroundColor};
+    color: ${Colors.red};
+    background-color: ${Colors.pink};
     transition: 0.3s;
   }
 `
 
 export const StyledLink = styled(NavHashLink)`
-  color: #000;
+  color: ${Colors.red};
   text-decoration: none;
   font-size: 28px;
 
@@ -62,6 +55,12 @@ export const H2 = styled.h1`
   }
 `
 
+export const H3 = styled.h3`
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+`
+
 export const P = styled.p`
   font-size: 24px;
   font-weight: 400;
@@ -85,7 +84,7 @@ export const SpaceP = styled(P)`
 `
 
 export const Box = styled.div`
-  border: 1px solid #000;
+  border: 1px solid ${Colors.red};
   padding: 20px;
   margin-bottom: 20px;
 `
@@ -103,11 +102,19 @@ export const SectionHeader = styled(Box)`
 export const ShowIcon = styled(Icon1)`
   position: relative;
   right: 0;
+
+  path {
+    fill: ${Colors.red};
+  }
 `
 
 export const HideIcon = styled(Icon2)`
   position: relative;
   right: 0;
+
+  path {
+    fill: ${Colors.red};
+  }
 `
 
 export const IconContainer = styled.button`
@@ -132,14 +139,15 @@ export const Grid = styled.div`
 
 export const ExternalLink = styled.a`
   text-decoration: none;
-  color: #000;
+  color: ${Colors.red};
   transition: 0.3s;
   position: ${({$contact}) => ($contact ? 'absolute' : 'unset')};
   width: 100%;
   height: 100%;
+  font-weight: 800;
 
   &:hover {
-    color: red;
+    color: ${Colors.red};
   }
 `
 
@@ -147,7 +155,7 @@ export const Circle = styled.div`
   height: 50px;
   width: 50px;
   border-radius: 100%;
-  background-color: ${({$color}) => $color};
+  background-color: ${Colors.red};
   cursor: pointer;
 `
 
@@ -156,4 +164,7 @@ export const Tag = styled.div`
   border: none;
   background-color: ${Colors.red};
   color: ${Colors.pink};
+  padding: 8px 12px;
+  text-transform: uppercase;
+  width: fit-content;
 `

@@ -20,18 +20,20 @@ const Footer = () => {
       .catch(console.error)
   }, [])
 
+  const copyright = 'Copyright © 2022 Isabel K. Lee. All rights reserved.'
+
   return (
     <FooterContainer>
-      <SmallP>Copyright © 2022 Isabel K. Lee. All rights reserved.</SmallP>
+      <SmallP>{copyright.toUpperCase()}</SmallP>
       {links && (
         <SmallP>
-          Built with{' '}
+          BUILT WITH{' '}
           <ExternalLink href={links[0].url} rel="nolink_referrer" target="_blank">
-            {links[0].title}
+            {links[0].title.toUpperCase()}
           </ExternalLink>{' '}
-          and{' '}
+          AND{' '}
           <ExternalLink href={links[1].url} rel="nolink_referrer" target="_blank">
-            {links[1].title}
+            {links[1].title.toUpperCase()}
           </ExternalLink>
           .
         </SmallP>

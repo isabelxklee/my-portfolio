@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import ToggleSection from '../../components/ToggleSection'
 import sanityClient from '../../client.js'
-import {PressContainer, PressItem} from './styles'
+import {PressContainer, PressItem, MetadataContainer} from './styles'
 import * as Styled from '../../styles'
 
 const Press = () => {
@@ -11,7 +11,7 @@ const Press = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "press"] {
+        `*[_type == "press"] | order(date desc) {
             _id,
             title,
             url,
@@ -30,7 +30,7 @@ const Press = () => {
 
   const dateFormatter = (date) => {
     const newDate = new Date(date)
-    const options = {month: 'long', year: 'numeric'}
+    const options = {month: 'short', year: 'numeric'}
     return newDate.toLocaleDateString('en-US', options)
   }
 
@@ -42,9 +42,18 @@ const Press = () => {
           <PressContainer>
             {pressItems.map((item) => (
               <PressItem key={item._id}>
-                <h2>{item.title}</h2>
-                <p>{item.source}</p>
-                <Styled.Tag>{dateFormatter(item.date)}</Styled.Tag>
+                <div>
+                  <Styled.H3>
+                    <Styled.ExternalLink href={item.url} target="_blank" rel="nolink_referrer">
+                      {item.title} 🔗
+                    </Styled.ExternalLink>
+                  </Styled.H3>
+                  <Styled.SpaceP>{item.source}</Styled.SpaceP>
+                </div>
+                <MetadataContainer>
+                  <Styled.Tag>{dateFormatter(item.date)}</Styled.Tag>
+                  <Styled.Tag>{item.tag}</Styled.Tag>
+                </MetadataContainer>
               </PressItem>
             ))}
           </PressContainer>
