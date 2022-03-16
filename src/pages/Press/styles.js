@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Box, Grid} from '../../styles'
+import {Box, Grid, ExternalLink} from '../../styles'
 
 export const PressContainer = styled(Grid)`
   grid-template-columns: repeat(2, 1fr);
@@ -13,4 +13,9 @@ export const PressItem = styled(Box)`
   @media (max-width: 900px) {
     margin-bottom: 0;
   }
+`
+
+export const PressLink = styled(ExternalLink)`
+  font-size: 24px;
+  margin-bottom: 12px;
 `
