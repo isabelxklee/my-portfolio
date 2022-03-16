@@ -37,11 +37,10 @@ const Home = () => {
   return (
     <>
       <Title>
-        <H1>isabel k. lee</H1>
+        <H1>ISABEL K. LEE</H1>
         <H1>2022.</H1>
       </Title>
       <Intro images={filterImages('Intro')} />
-      {/* <Work /> */}
       <Press />
       <About />
       <Contact />
