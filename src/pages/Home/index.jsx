@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {H1} from '../../styles'
 import {Title} from './styles'
 import Intro from '../../components/Intro'
+import Press from '../Press'
 // import Work from '../Work'
 import About from '../About'
 import Contact from '../Contact'
@@ -41,6 +42,7 @@ const Home = () => {
       </Title>
       <Intro images={filterImages('Intro')} />
       {/* <Work /> */}
+      <Press />
       <About />
       <Contact />
       <Footer />
