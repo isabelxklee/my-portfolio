@@ -30,7 +30,7 @@ const Press = () => {
 
   const dateFormatter = (date) => {
     const newDate = new Date(date)
-    const options = {month: 'long', year: 'numeric'}
+    const options = {month: 'short', year: 'numeric'}
     return newDate.toLocaleDateString('en-US', options)
   }
 
@@ -42,12 +42,14 @@ const Press = () => {
           <PressContainer>
             {pressItems.map((item) => (
               <PressItem key={item._id}>
-                <Styled.H3>
-                  <Styled.ExternalLink href={item.url} target="_blank" rel="nolink_referrer">
-                    {item.title} 🔗
-                  </Styled.ExternalLink>
-                </Styled.H3>
-                <Styled.SpaceP>{item.source}</Styled.SpaceP>
+                <div>
+                  <Styled.H3>
+                    <Styled.ExternalLink href={item.url} target="_blank" rel="nolink_referrer">
+                      {item.title} 🔗
+                    </Styled.ExternalLink>
+                  </Styled.H3>
+                  <Styled.SpaceP>{item.source}</Styled.SpaceP>
+                </div>
                 <MetadataContainer>
                   <Styled.Tag>{dateFormatter(item.date)}</Styled.Tag>
                   <Styled.Tag>{item.tag}</Styled.Tag>
