@@ -158,4 +158,7 @@ export const Tag = styled.div`
   border: none;
   background-color: ${Colors.red};
   color: ${Colors.pink};
+  padding: 8px 12px;
+  text-transform: uppercase;
+  width: fit-content;
 `

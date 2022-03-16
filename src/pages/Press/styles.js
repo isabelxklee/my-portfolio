@@ -10,11 +10,7 @@ export const PressContainer = styled(Grid)`
 `
 
 export const PressItem = styled(Box)`
-  height: 140px;
-  position: relative;
-
   @media (max-width: 900px) {
-    height: 40px;
     margin-bottom: 0;
   }
 `
