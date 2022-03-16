@@ -1,9 +1,23 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {SpaceP, Box, Half} from '../../styles'
 import ToggleSection from '../../components/ToggleSection'
+import sanityClient from '../../client.js'
 
 const About = () => {
   const [display, setDisplay] = useState(false)
+  const [aboutInfo, setAboutInfo] = useState(null)
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "about"] {
+            _id,
+            content
+        }`
+      )
+      .then((data) => setAboutInfo(data))
+      .catch(console.error)
+  }, [])
 
   const handleClick = () => {
     setDisplay((display) => !display)
@@ -15,7 +29,7 @@ const About = () => {
       {display && (
         <Box>
           <Half>
-            <SpaceP>
+            {/* <SpaceP>
               Hello, fellow Internet surfer! Thank you for visiting my corner of the web. 🌞
             </SpaceP>
             <SpaceP>
@@ -28,7 +42,7 @@ const About = () => {
               in Montreal. I care deeply about political activism, cooking for others, and taking
               care of my large, adult son, Finklestein (he's actually a cat).
             </SpaceP>
-            <SpaceP>Let’s build something together!</SpaceP>
+            <SpaceP>Let’s build something together!</SpaceP> */}
           </Half>
         </Box>
       )}
