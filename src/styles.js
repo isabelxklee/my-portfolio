@@ -55,6 +55,12 @@ export const H2 = styled.h1`
   }
 `
 
+export const H3 = styled.h3`
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 16px;
+`
+
 export const P = styled.p`
   font-size: 24px;
   font-weight: 400;

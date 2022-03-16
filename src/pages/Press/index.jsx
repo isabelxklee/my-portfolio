@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import ToggleSection from '../../components/ToggleSection'
 import sanityClient from '../../client.js'
-import {PressContainer, PressItem, PressLink} from './styles'
+import {PressContainer, PressItem} from './styles'
 import * as Styled from '../../styles'
 
 const Press = () => {
@@ -42,9 +42,11 @@ const Press = () => {
           <PressContainer>
             {pressItems.map((item) => (
               <PressItem key={item._id}>
-                <PressLink href={item.url} target="_blank" rel="nolink_referrer">
-                  {item.title} 🔗
-                </PressLink>
+                <Styled.H3>
+                  <Styled.ExternalLink href={item.url} target="_blank" rel="nolink_referrer">
+                    {item.title} 🔗
+                  </Styled.ExternalLink>
+                </Styled.H3>
                 <Styled.SpaceP>{item.source}</Styled.SpaceP>
                 <Styled.Tag>{dateFormatter(item.date)}</Styled.Tag>
               </PressItem>

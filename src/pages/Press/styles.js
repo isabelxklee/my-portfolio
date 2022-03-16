@@ -14,8 +14,3 @@ export const PressItem = styled(Box)`
     margin-bottom: 0;
   }
 `
-
-export const PressLink = styled(ExternalLink)`
-  font-size: 24px;
-  margin-bottom: 12px;
-`
