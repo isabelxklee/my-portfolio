@@ -44,9 +44,13 @@ const Press = () => {
               <PressItem key={item._id}>
                 <div>
                   <Styled.H3>
-                    <Styled.ExternalLink href={item.url} target="_blank" rel="nolink_referrer">
-                      {item.title} 🔗
-                    </Styled.ExternalLink>
+                    {item.url ? (
+                      <Styled.ExternalLink href={item.url} target="_blank" rel="nolink_referrer">
+                        {item.title} 🔗
+                      </Styled.ExternalLink>
+                    ) : (
+                      item.title
+                    )}
                   </Styled.H3>
                   <Styled.SpaceP>{item.source}</Styled.SpaceP>
                 </div>

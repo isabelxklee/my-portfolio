@@ -13,6 +13,11 @@ export const ContactItem = styled(Box)`
   height: 140px;
   cursor: pointer;
   position: relative;
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   @media (max-width: 900px) {
     height: 40px;

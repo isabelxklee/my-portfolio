@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {ExternalLink} from '../../styles'
+import {ExternalLink, H3} from '../../styles'
 import {ContactItem, ContactContainer} from './styles'
 import ToggleSection from '../../components/ToggleSection'
 import sanityClient from '../../client.js'
@@ -34,9 +34,16 @@ const Contact = () => {
           <ContactContainer>
             {links.map((link) => (
               <ContactItem key={link._id}>
-                <ExternalLink href={link.url} rel="nolink_referrer" target="_blank" $contact={true}>
-                  {link.title}
-                </ExternalLink>
+                <H3>
+                  <ExternalLink
+                    href={link.url}
+                    rel="nolink_referrer"
+                    target="_blank"
+                    $contact={true}
+                  >
+                    {link.title.toUpperCase()}
+                  </ExternalLink>
+                </H3>
               </ContactItem>
             ))}
           </ContactContainer>
