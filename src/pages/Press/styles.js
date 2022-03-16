@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Box, Grid, ExternalLink} from '../../styles'
+import {Box, Grid} from '../../styles'
 
 export const PressContainer = styled(Grid)`
   grid-template-columns: repeat(2, 1fr);
@@ -17,4 +17,9 @@ export const PressItem = styled(Box)`
   @media (max-width: 900px) {
     margin-bottom: 0;
   }
+`
+
+export const MetadataContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
 `

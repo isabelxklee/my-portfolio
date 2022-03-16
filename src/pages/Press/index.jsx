@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import ToggleSection from '../../components/ToggleSection'
 import sanityClient from '../../client.js'
-import {PressContainer, PressItem} from './styles'
+import {PressContainer, PressItem, MetadataContainer} from './styles'
 import * as Styled from '../../styles'
 
 const Press = () => {
@@ -48,7 +48,10 @@ const Press = () => {
                   </Styled.ExternalLink>
                 </Styled.H3>
                 <Styled.SpaceP>{item.source}</Styled.SpaceP>
-                <Styled.Tag>{dateFormatter(item.date)}</Styled.Tag>
+                <MetadataContainer>
+                  <Styled.Tag>{dateFormatter(item.date)}</Styled.Tag>
+                  <Styled.Tag>{item.tag}</Styled.Tag>
+                </MetadataContainer>
               </PressItem>
             ))}
           </PressContainer>
