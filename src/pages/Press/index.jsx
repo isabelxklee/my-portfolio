@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import ToggleSection from '../../components/ToggleSection'
 import sanityClient from '../../client.js'
 import {PressContainer, PressItem} from './styles'
-// import * as Styled from '../../styles'
+import * as Styled from '../../styles'
 
 const Press = () => {
   const [pressItems, setPressItems] = useState(null)
@@ -44,7 +44,7 @@ const Press = () => {
               <PressItem key={item._id}>
                 <h2>{item.title}</h2>
                 <p>{item.source}</p>
-                <p>{dateFormatter(item.date)}</p>
+                <Styled.Tag>{dateFormatter(item.date)}</Styled.Tag>
               </PressItem>
             ))}
           </PressContainer>
