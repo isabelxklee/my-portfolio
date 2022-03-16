@@ -3,12 +3,6 @@ import {NavHashLink} from 'react-router-hash-link'
 import {ReactComponent as Icon1} from './assets/icon-show.svg'
 import {ReactComponent as Icon2} from './assets/icon-hide.svg'
 
-// export const ColorCombos = [
-//   {color: '#282828', backgroundColor: '#E0B792'},
-//   {color: '#D10000', backgroundColor: '#F4C7B9'},
-//   {color: '#C56A00', backgroundColor: '#F4F2EB'},
-// ]
-
 export const Colors = {
   red: '#D10000',
   pink: '#F4C7B9',
@@ -28,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const StyledLink = styled(NavHashLink)`
-  color: #000;
+  color: ${Colors.red};
   text-decoration: none;
   font-size: 28px;
 
@@ -85,7 +79,7 @@ export const SpaceP = styled(P)`
 `
 
 export const Box = styled.div`
-  border: 1px solid #000;
+  border: 1px solid ${Colors.red};
   padding: 20px;
   margin-bottom: 20px;
 `
@@ -132,11 +126,12 @@ export const Grid = styled.div`
 
 export const ExternalLink = styled.a`
   text-decoration: none;
-  color: #000;
+  color: ${Colors.red};
   transition: 0.3s;
   position: ${({$contact}) => ($contact ? 'absolute' : 'unset')};
   width: 100%;
   height: 100%;
+  font-weight: 800;
 
   &:hover {
     color: ${Colors.red};
