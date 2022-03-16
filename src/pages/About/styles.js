@@ -8,6 +8,10 @@ export const AboutContainer = styled.div`
   p {
     font-size: 24px;
   }
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 export const ImageContainer = styled.div`
