@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import {SpaceP, Box, Half} from '../../styles'
+import {AboutContainer} from './styles'
 import ToggleSection from '../../components/ToggleSection'
 import sanityClient from '../../client.js'
-import {PortableText} from '@portabletext/react'
+import BlockContent from '@sanity/block-content-to-react'
 
 const About = () => {
   const [display, setDisplay] = useState(false)
@@ -29,9 +30,9 @@ const About = () => {
       <ToggleSection display={display} handleClick={handleClick} title={'about'} />
       {display && (
         <Box>
-          <Half>
-            <SpaceP>{aboutInfo && <PortableText value={aboutInfo[0].content} />}</SpaceP>
-          </Half>
+          <AboutContainer>
+            {aboutInfo && <BlockContent blocks={aboutInfo[0].content} />}
+          </AboutContainer>
         </Box>
       )}
     </>
