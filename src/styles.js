@@ -12,8 +12,6 @@ export const ColorCombos = [
 export const Colors = {
   red: '#D10000',
   pink: '#F4C7B9',
-  blue: '#BCF1DB',
-  otherBlue: '#19168C',
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -156,6 +154,6 @@ export const Circle = styled.div`
 export const Tag = styled.div`
   border-radius: 4px;
   border: none;
-  background-color: ${Colors.blue};
-  color: ${Colors.otherBlue};
+  background-color: ${Colors.red};
+  color: ${Colors.pink};
 `
