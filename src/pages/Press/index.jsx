@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import ToggleSection from '../../components/ToggleSection'
 import sanityClient from '../../client.js'
-import PressContainer from './styles'
+import {PressContainer} from './styles'
 // import * as Styled from '../../styles'
 
 const Press = () => {
