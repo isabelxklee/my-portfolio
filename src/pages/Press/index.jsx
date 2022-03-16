@@ -28,7 +28,11 @@ const Press = () => {
     setDisplay((display) => !display)
   }
 
-  console.log(pressItems)
+  const dateFormatter = (date) => {
+    const newDate = new Date(date)
+    const options = {month: 'long', year: 'numeric'}
+    return newDate.toLocaleDateString('en-US', options)
+  }
 
   return (
     <>
@@ -37,7 +41,11 @@ const Press = () => {
         <>
           <PressContainer>
             {pressItems.map((item) => (
-              <PressItem key={item._id}>hello world</PressItem>
+              <PressItem key={item._id}>
+                <h2>{item.title}</h2>
+                <p>{item.source}</p>
+                <p>{dateFormatter(item.date)}</p>
+              </PressItem>
             ))}
           </PressContainer>
         </>
