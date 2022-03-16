@@ -31,6 +31,13 @@ export default {
       type: 'string',
     },
   ],
+  orderings: [
+    {
+      title: 'Date, Latest',
+      name: 'latestDate',
+      by: [{field: 'date', direction: 'desc'}],
+    },
+  ],
 
   preview: {
     select: {
