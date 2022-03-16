@@ -11,6 +11,7 @@ import tag from './tag'
 import project from './project'
 import link from './link'
 import press from './press'
+import about from './about'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -27,5 +28,6 @@ export default createSchema({
     project,
     link,
     press,
+    about,
   ]),
 })
