@@ -145,9 +145,10 @@ export const ExternalLink = styled.a`
   width: 100%;
   height: 100%;
   font-weight: 800;
+  transition: 0.5s;
 
   &:hover {
-    color: ${Colors.red};
+    opacity: 0.5;
   }
 `
 
