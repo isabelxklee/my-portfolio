@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {IconContainer, ShowIcon, HideIcon, SectionHeader, H2} from '../../styles'
+import {IconContainer, ShowIcon, HideIcon, AccordionContainer, H2} from '../../styles'
 
 const Accordion = ({title, children}) => {
   const [display, setDisplay] = useState(false)
@@ -12,10 +12,10 @@ const Accordion = ({title, children}) => {
 
   return (
     <>
-      <SectionHeader onClick={handleClick}>
+      <AccordionContainer onClick={handleClick}>
         <H2>{title.toUpperCase()}</H2>
         <IconContainer>{display ? <HideIcon /> : <ShowIcon />}</IconContainer>
-      </SectionHeader>
+      </AccordionContainer>
       {display && children}
     </>
   )

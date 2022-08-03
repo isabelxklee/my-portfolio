@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import Loading from '../../components/Loading'
 import sanityClient from '../../client.js'
 import {PressContainer, PressItem, MetadataContainer} from './styles'
 import * as Styled from '../../styles'
@@ -28,8 +27,6 @@ const Press = () => {
     const options = {month: 'short', year: 'numeric'}
     return newDate.toLocaleDateString('en-US', options)
   }
-
-  console.log(pressItems)
 
   return (
     <>

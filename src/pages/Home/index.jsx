@@ -44,8 +44,12 @@ const Home = () => {
       <Accordion title={'Press'}>
         <Press />
       </Accordion>
-      <About />
-      <Contact />
+      <Accordion title={'About'}>
+        <About />
+      </Accordion>
+      <Accordion title={'Contact'}>
+        <Contact />
+      </Accordion>
       <Footer />
     </>
   )
