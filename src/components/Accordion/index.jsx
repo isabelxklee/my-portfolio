@@ -12,14 +12,11 @@ const Accordion = ({title, children}) => {
 
   return (
     <>
-      <SectionHeader
-        // id="work"
-        onClick={handleClick}
-      >
+      <SectionHeader onClick={handleClick}>
         <H2>{title.toUpperCase()}</H2>
         <IconContainer>{display ? <HideIcon /> : <ShowIcon />}</IconContainer>
       </SectionHeader>
-      {display ? children : null}
+      {display && children}
     </>
   )
 }

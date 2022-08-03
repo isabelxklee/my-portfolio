@@ -29,9 +29,11 @@ const Press = () => {
     return newDate.toLocaleDateString('en-US', options)
   }
 
+  console.log(pressItems)
+
   return (
     <>
-      {pressItems ? (
+      {pressItems && (
         <PressContainer>
           {pressItems.map((item) => (
             <PressItem key={item._id}>
@@ -54,8 +56,6 @@ const Press = () => {
             </PressItem>
           ))}
         </PressContainer>
-      ) : (
-        <Loading />
       )}
     </>
   )
