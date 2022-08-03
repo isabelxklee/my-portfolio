@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react'
-import ToggleSection from '../../components/ToggleSection'
+import Loading from '../../components/Loading'
 import sanityClient from '../../client.js'
 import {PressContainer, PressItem, MetadataContainer} from './styles'
 import * as Styled from '../../styles'
 
 const Press = () => {
   const [pressItems, setPressItems] = useState(null)
-  const [display, setDisplay] = useState(false)
 
   useEffect(() => {
     sanityClient
@@ -23,10 +22,6 @@ const Press = () => {
       .then((data) => setPressItems(data))
       .catch(console.error)
   }, [])
-
-  const handleClick = () => {
-    setDisplay((display) => !display)
-  }
 
   const dateFormatter = (date) => {
     const newDate = new Date(date)
@@ -60,7 +55,7 @@ const Press = () => {
           ))}
         </PressContainer>
       ) : (
-        <p>Loading</p>
+        <Loading />
       )}
     </>
   )
