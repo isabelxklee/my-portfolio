@@ -36,32 +36,31 @@ const Press = () => {
 
   return (
     <>
-      <ToggleSection display={display} handleClick={handleClick} title={'press'} />
-      {display && (
-        <>
-          <PressContainer>
-            {pressItems.map((item) => (
-              <PressItem key={item._id}>
-                <div>
-                  <Styled.H3>
-                    {item.url ? (
-                      <Styled.ExternalLink href={item.url} target="_blank" rel="nolink_referrer">
-                        {item.title} 🔗
-                      </Styled.ExternalLink>
-                    ) : (
-                      item.title
-                    )}
-                  </Styled.H3>
-                  <Styled.SpaceP>{item.source}</Styled.SpaceP>
-                </div>
-                <MetadataContainer>
-                  <Styled.Tag>{dateFormatter(item.date)}</Styled.Tag>
-                  <Styled.Tag>{item.tag}</Styled.Tag>
-                </MetadataContainer>
-              </PressItem>
-            ))}
-          </PressContainer>
-        </>
+      {pressItems ? (
+        <PressContainer>
+          {pressItems.map((item) => (
+            <PressItem key={item._id}>
+              <div>
+                <Styled.H3>
+                  {item.url ? (
+                    <Styled.ExternalLink href={item.url} target="_blank" rel="nolink_referrer">
+                      {item.title} 🔗
+                    </Styled.ExternalLink>
+                  ) : (
+                    item.title
+                  )}
+                </Styled.H3>
+                <Styled.SpaceP>{item.source}</Styled.SpaceP>
+              </div>
+              <MetadataContainer>
+                <Styled.Tag>{dateFormatter(item.date)}</Styled.Tag>
+                <Styled.Tag>{item.tag}</Styled.Tag>
+              </MetadataContainer>
+            </PressItem>
+          ))}
+        </PressContainer>
+      ) : (
+        <p>Loading</p>
       )}
     </>
   )
