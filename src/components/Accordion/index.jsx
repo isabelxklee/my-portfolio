@@ -8,8 +8,6 @@ const Accordion = ({title, children}) => {
     return setDisplay((display) => !display)
   }
 
-  console.log(display)
-
   return (
     <>
       <AccordionContainer onClick={handleClick}>
