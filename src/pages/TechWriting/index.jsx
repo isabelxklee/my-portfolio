@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import sanityClient from '../../client.js'
-import {ProjectContainer} from '../Work/styles'
+import {PressContainer} from '../Press/styles'
 import * as Styled from '../../styles'
 import {MainImage, PostContainer} from './styles'
 
@@ -31,7 +31,7 @@ const TechWriting = () => {
   return (
     <>
       {techWritingPosts && (
-        <ProjectContainer>
+        <PressContainer>
           {techWritingPosts.map((post) => (
             <PostContainer key={post._id}>
               <MainImage src={post.mainImage.asset.url} alt="" />
@@ -45,7 +45,7 @@ const TechWriting = () => {
               </div>
             </PostContainer>
           ))}
-        </ProjectContainer>
+        </PressContainer>
       )}
     </>
   )
