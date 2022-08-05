@@ -9,7 +9,6 @@ export const MainImage = styled.img`
 export const PostContainer = styled(Box)`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 0;
 
   @media (max-width: 900px) {
