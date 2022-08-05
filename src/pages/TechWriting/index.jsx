@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import sanityClient from '../../client.js'
-// import Project from '../../components/Project'
 import {ProjectContainer} from '../Work/styles'
-import {PressItem} from '../Press/styles'
 import * as Styled from '../../styles'
+import {MainImage, PostContainer} from './styles'
 
 const TechWriting = () => {
   const [techWritingPosts, setTechWritingPosts] = useState(null)
@@ -34,15 +33,17 @@ const TechWriting = () => {
       {techWritingPosts && (
         <ProjectContainer>
           {techWritingPosts.map((post) => (
-            <PressItem key={post._id}>
-              <img src={post.mainImage.asset.url} alt="" />
-              <Styled.H3>
-                <Styled.ExternalLink href={post.url} target="_blank" rel="nolink_referrer">
-                  {post.title} 🔗
-                </Styled.ExternalLink>
-              </Styled.H3>
-              <Styled.SpaceP>{post.description}</Styled.SpaceP>
-            </PressItem>
+            <PostContainer key={post._id}>
+              <MainImage src={post.mainImage.asset.url} alt="" />
+              <div style={{padding: '20px'}}>
+                <Styled.H3>
+                  <Styled.ExternalLink href={post.url} target="_blank" rel="nolink_referrer">
+                    {post.title} 🔗
+                  </Styled.ExternalLink>
+                </Styled.H3>
+                <Styled.SpaceP>{post.description}</Styled.SpaceP>
+              </div>
+            </PostContainer>
           ))}
         </ProjectContainer>
       )}
