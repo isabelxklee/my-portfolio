@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import sanityClient from '../../client.js'
 // import Project from '../../components/Project'
-import {ProjectContainer} from './styles'
+import {ProjectContainer} from '../Work/styles'
 
 const TechWriting = () => {
   const [techWritingPosts, setTechWritingPosts] = useState(null)

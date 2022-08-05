@@ -3,6 +3,7 @@ import {H1} from '../../styles'
 import {Title} from './styles'
 import Intro from '../../components/Intro'
 import Accordion from '../../components/Accordion'
+import TechWriting from '../TechWriting'
 import Press from '../Press'
 import About from '../About'
 import Contact from '../Contact'
@@ -41,6 +42,9 @@ const Home = () => {
         <H1>2022.</H1>
       </Title>
       <Intro images={filterImages('Intro')} />
+      <Accordion title={'Tech Writing'}>
+        <TechWriting />
+      </Accordion>
       <Accordion title={'Press'}>
         <Press />
       </Accordion>
