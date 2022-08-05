@@ -27,17 +27,21 @@ const TechWriting = () => {
       .catch(console.error)
   }, [])
 
+  console.log(techWritingPosts)
+
   return (
     <>
       {techWritingPosts && (
         <ProjectContainer>
           {techWritingPosts.map((post) => (
             <PressItem key={post._id}>
+              <img src={post.mainImage.asset.url} alt="" />
               <Styled.H3>
                 <Styled.ExternalLink href={post.url} target="_blank" rel="nolink_referrer">
                   {post.title} 🔗
                 </Styled.ExternalLink>
               </Styled.H3>
+              <Styled.SpaceP>{post.description}</Styled.SpaceP>
             </PressItem>
           ))}
         </ProjectContainer>
