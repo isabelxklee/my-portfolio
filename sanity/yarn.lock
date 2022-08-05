@@ -3471,6 +3471,9 @@
   "version" "2.0.0"
 
 "date-fns@^2.16.1":
+  "integrity" "sha512-dlLD5rKaKxpFdnjrs+5azHDFOPEu4ANy/LTh04A1DTzMM7qoajmKCBc8pkKRFT41CNzw+4gQh79X5C+Jq27HAw=="
+  "resolved" "https://registry.npmjs.org/date-fns/-/date-fns-2.29.1.tgz"
+  "version" "2.29.1"
 
 "date-now@1.0.1":
   "integrity" "sha1-u30IZDjevkGCpIX7PfP7+5nWFTw="
