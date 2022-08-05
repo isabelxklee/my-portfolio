@@ -2,8 +2,9 @@ import React, {useState, useEffect} from 'react'
 import {H1} from '../../styles'
 import {Title} from './styles'
 import Intro from '../../components/Intro'
+import Accordion from '../../components/Accordion'
+import TechWriting from '../TechWriting'
 import Press from '../Press'
-// import Work from '../Work'
 import About from '../About'
 import Contact from '../Contact'
 import Footer from '../../components/Footer'
@@ -41,9 +42,18 @@ const Home = () => {
         <H1>2022.</H1>
       </Title>
       <Intro images={filterImages('Intro')} />
-      <Press />
-      <About />
-      <Contact />
+      <Accordion title={'Tech Writing'}>
+        <TechWriting />
+      </Accordion>
+      <Accordion title={'Press'}>
+        <Press />
+      </Accordion>
+      <Accordion title={'About'}>
+        <About />
+      </Accordion>
+      <Accordion title={'Contact'}>
+        <Contact />
+      </Accordion>
       <Footer />
     </>
   )

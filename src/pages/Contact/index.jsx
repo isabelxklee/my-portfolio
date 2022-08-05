@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import {ExternalLink, H3} from '../../styles'
 import {ContactItem, ContactContainer} from './styles'
-import ToggleSection from '../../components/ToggleSection'
 import sanityClient from '../../client.js'
 
 const Contact = () => {
-  const [display, setDisplay] = useState(false)
   const [links, setLinks] = useState([])
 
   useEffect(() => {
@@ -22,32 +20,20 @@ const Contact = () => {
       .catch(console.error)
   }, [])
 
-  const handleClick = () => {
-    setDisplay((display) => !display)
-  }
-
   return (
     <>
-      <ToggleSection display={display} handleClick={handleClick} title={'contact'} />
-      {display && (
-        <>
-          <ContactContainer>
-            {links.map((link) => (
-              <ContactItem key={link._id}>
-                <H3>
-                  <ExternalLink
-                    href={link.url}
-                    rel="nolink_referrer"
-                    target="_blank"
-                    $contact={true}
-                  >
-                    {link.title.toUpperCase()}
-                  </ExternalLink>
-                </H3>
-              </ContactItem>
-            ))}
-          </ContactContainer>
-        </>
+      {links && (
+        <ContactContainer>
+          {links.map((link) => (
+            <ContactItem key={link._id}>
+              <H3>
+                <ExternalLink href={link.url} rel="nolink_referrer" target="_blank" $contact={true}>
+                  {link.title.toUpperCase()}
+                </ExternalLink>
+              </H3>
+            </ContactItem>
+          ))}
+        </ContactContainer>
       )}
     </>
   )

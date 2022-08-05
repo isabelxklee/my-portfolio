@@ -93,7 +93,7 @@ export const Space = styled.div`
   margin-top: 20px;
 `
 
-export const SectionHeader = styled(Box)`
+export const AccordionContainer = styled(Box)`
   display: flex;
   justify-content: space-between;
   cursor: pointer;
