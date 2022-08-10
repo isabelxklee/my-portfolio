@@ -5,8 +5,13 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'content',
-      title: 'Content',
+      name: 'intro',
+      title: 'Intro Copy',
+      type: 'string',
+    },
+    {
+      name: 'about',
+      title: 'About Copy',
       type: 'array',
       of: [{type: 'block'}],
     },

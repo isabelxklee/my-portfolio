@@ -26,6 +26,7 @@ const TechWriting = () => {
   }, [])
 
   const transformImageURL = (URL) => `${URL}?w=1000`
+  const truncateString = (string) => `${string.substring(0, 120)}...`
 
   return (
     <>
@@ -42,7 +43,7 @@ const TechWriting = () => {
                     {post.title} 🔗
                   </Styled.ExternalLink>
                 </Styled.H3>
-                <Styled.SpaceP>{post.description}</Styled.SpaceP>
+                <Styled.SpaceP>{truncateString(post.description)}</Styled.SpaceP>
               </div>
             </PostContainer>
           ))}

@@ -21,6 +21,27 @@ export const GlobalStyle = createGlobalStyle`
   }
 `
 
+export const SiteTitle = styled.div`
+  margin: 300px 0 240px 0;
+  color: ${Colors.tertiary};
+
+  @media (max-width: 960px) {
+    margin: 200px 0 100px 0;
+  }
+`
+
+export const TagLine = styled.p`
+  font-size: 32px;
+  font-weight: 500;
+  margin: 20px 0 0 0;
+  width: 70%;
+
+  @media (max-width: 600px) {
+    font-size: 28px;
+    width: 100%;
+  }
+`
+
 export const StyledLink = styled(NavHashLink)`
   color: ${Colors.primary};
   text-decoration: none;
@@ -54,6 +75,7 @@ export const H2 = styled.h1`
   font-size: 60px;
   font-weight: 500;
   margin: 0;
+  color: ${Colors.tertiary};
 
   @media (max-width: 600px) {
     font-size: 40px;
@@ -64,6 +86,10 @@ export const H3 = styled.h3`
   font-size: 24px;
   font-weight: 800;
   margin: 0 0 12px 0;
+
+  @media (max-width: 1100px) {
+    font-size: 20px;
+  }
 `
 
 export const P = styled.p`
@@ -73,7 +99,7 @@ export const P = styled.p`
   position: ${({$position}) => $position};
   z-index: ${({$zIndex}) => $zIndex};
 
-  @media (max-width: 600px) {
+  @media (max-width: 1100px) {
     font-size: 20px;
   }
 `
@@ -164,7 +190,7 @@ export const ThreeColumnGrid = styled(Grid)`
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 640px) {
     grid-template-columns: 1fr;
   }
 `
