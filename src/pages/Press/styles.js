@@ -24,4 +24,8 @@ export const MetadataContainer = styled.div`
     flex-direction: column;
     gap: 12px;
   }
+
+  @media (max-width: 640px) {
+    margin-top: 18px;
+  }
 `
