@@ -8,11 +8,11 @@ const Footer = () => {
   return (
     <FooterContainer>
       <Left>
-        <SmallP>{copyright.toUpperCase()}</SmallP>
+        <SmallP>⚫️ {copyright.toUpperCase()}</SmallP>
       </Left>
       <Right>
         <SmallP>
-          BUILT WITH{' '}
+          🔵 BUILT WITH{' '}
           <ExternalLink
             href={'https://www.sanity.io/docs/getting-started'}
             rel="nolink_referrer"
