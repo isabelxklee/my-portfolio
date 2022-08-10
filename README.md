@@ -2,7 +2,7 @@
 
 # My Portfolio 💙
 
-![kleetime com_](https://user-images.githubusercontent.com/52360534/149446429-e4d1d66d-a99a-4651-9cd1-5d80135fd382.png)
+![kleetime com_ copy](https://user-images.githubusercontent.com/52360534/183817809-8db502a9-7655-4fa5-9ecb-42715b4caa32.png)
 
 ## Getting started
 
