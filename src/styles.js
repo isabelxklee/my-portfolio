@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Helvetica Neue", "sans-serif";
     color: ${Colors.primary};
     background-color: ${Colors.secondary};
-    transition: 0.3s;
+    transition: 0.5s;
   }
 `
 
@@ -143,10 +143,22 @@ export const Grid = styled.div`
   grid-row-gap: 20px;
 `
 
+export const ThreeColumnGrid = styled(Grid)`
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+`
+
 export const ExternalLink = styled.a`
   text-decoration: none;
   color: ${Colors.primary};
-  transition: 0.3s;
+  transition: 0.5s;
   position: ${({$contact}) => ($contact ? 'absolute' : 'unset')};
   width: 100%;
   height: 100%;

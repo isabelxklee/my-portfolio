@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import sanityClient from '../../client.js'
-import {PressContainer} from '../Press/styles'
 import * as Styled from '../../styles'
 import {MainImage, PostContainer} from './styles'
 
@@ -31,13 +30,15 @@ const TechWriting = () => {
   return (
     <>
       {techWritingPosts && (
-        <PressContainer>
+        <Styled.ThreeColumnGrid>
           {techWritingPosts.map((post) => (
             <PostContainer key={post._id}>
-              <MainImage src={transformImageURL(post.mainImage.asset.url)} alt={post.title} />
+              <Styled.ExternalLink href={post.url} target="_blank" rel="noreferrer">
+                <MainImage src={transformImageURL(post.mainImage.asset.url)} alt={post.title} />
+              </Styled.ExternalLink>
               <div style={{padding: '20px'}}>
                 <Styled.H3>
-                  <Styled.ExternalLink href={post.url} target="_blank" rel="nolink_referrer">
+                  <Styled.ExternalLink href={post.url} target="_blank" rel="noreferrer">
                     {post.title} 🔗
                   </Styled.ExternalLink>
                 </Styled.H3>
@@ -45,7 +46,7 @@ const TechWriting = () => {
               </div>
             </PostContainer>
           ))}
-        </PressContainer>
+        </Styled.ThreeColumnGrid>
       )}
     </>
   )
