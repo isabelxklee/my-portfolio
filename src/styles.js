@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const SiteTitle = styled.div`
-  margin: 300px 0 150px 0;
+  margin: 300px 0 200px 0;
   color: ${Colors.tertiary};
 `
 
@@ -71,6 +71,7 @@ export const H2 = styled.h1`
   font-size: 60px;
   font-weight: 500;
   margin: 0;
+  color: ${Colors.tertiary};
 
   @media (max-width: 600px) {
     font-size: 40px;
