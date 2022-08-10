@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import sanityClient from '../../client.js'
-import {PressContainer, PressItem, MetadataContainer} from './styles'
+import {PressItem, MetadataContainer} from './styles'
 import * as Styled from '../../styles'
 
 const Press = () => {
@@ -31,7 +31,7 @@ const Press = () => {
   return (
     <>
       {pressItems && (
-        <PressContainer>
+        <Styled.ThreeColumnGrid>
           {pressItems.map((item) => (
             <PressItem key={item._id}>
               <div>
@@ -52,7 +52,7 @@ const Press = () => {
               </MetadataContainer>
             </PressItem>
           ))}
-        </PressContainer>
+        </Styled.ThreeColumnGrid>
       )}
     </>
   )

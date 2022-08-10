@@ -4,8 +4,9 @@ import {ReactComponent as Icon1} from './assets/icon-show.svg'
 import {ReactComponent as Icon2} from './assets/icon-hide.svg'
 
 export const Colors = {
-  red: '#D10000',
-  pink: '#F4C7B9',
+  primary: '#1B1918',
+  secondary: '#EBFF00',
+  tertiary: '#0500FF',
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -14,14 +15,14 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     text-rendering: optimizeLegibility;
     font-family: "Helvetica Neue", "sans-serif";
-    color: ${Colors.red};
-    background-color: ${Colors.pink};
+    color: ${Colors.primary};
+    background-color: ${Colors.secondary};
     transition: 0.3s;
   }
 `
 
 export const StyledLink = styled(NavHashLink)`
-  color: ${Colors.red};
+  color: ${Colors.primary};
   text-decoration: none;
   font-size: 28px;
 
@@ -32,6 +33,10 @@ export const StyledLink = styled(NavHashLink)`
 
 export const Wrapper = styled.div`
   margin: 40px;
+
+  @media (max-width: 1000px) {
+    margin: 20px;
+  }
 `
 
 export const H1 = styled.h1`
@@ -84,7 +89,7 @@ export const SpaceP = styled(P)`
 `
 
 export const Box = styled.div`
-  border: 1px solid ${Colors.red};
+  border: 1px solid ${Colors.primary};
   padding: 20px;
   margin-bottom: 20px;
 `
@@ -96,7 +101,13 @@ export const Space = styled.div`
 export const AccordionContainer = styled(Box)`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: ${Colors.tertiary};
+  }
 `
 
 export const ShowIcon = styled(Icon1)`
@@ -104,7 +115,11 @@ export const ShowIcon = styled(Icon1)`
   right: 0;
 
   path {
-    fill: ${Colors.red};
+    fill: ${Colors.primary};
+  }
+
+  @media (max-width: 600px) {
+    width: 50px;
   }
 `
 
@@ -113,7 +128,11 @@ export const HideIcon = styled(Icon2)`
   right: 0;
 
   path {
-    fill: ${Colors.red};
+    fill: ${Colors.primary};
+  }
+
+  @media (max-width: 600px) {
+    width: 50px;
   }
 `
 
@@ -121,6 +140,7 @@ export const IconContainer = styled.button`
   border: none;
   background: transparent;
   cursor: pointer;
+  height: 72px;
 `
 
 export const Half = styled.div`
@@ -137,18 +157,30 @@ export const Grid = styled.div`
   grid-row-gap: 20px;
 `
 
+export const ThreeColumnGrid = styled(Grid)`
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+`
+
 export const ExternalLink = styled.a`
   text-decoration: none;
-  color: ${Colors.red};
+  color: ${Colors.primary};
   transition: 0.3s;
   position: ${({$contact}) => ($contact ? 'absolute' : 'unset')};
   width: 100%;
   height: 100%;
   font-weight: 800;
-  transition: 0.5s;
+  transition: 0.3s;
 
   &:hover {
-    opacity: 0.5;
+    color: ${Colors.tertiary};
   }
 `
 
@@ -156,15 +188,15 @@ export const Circle = styled.div`
   height: 50px;
   width: 50px;
   border-radius: 100%;
-  background-color: ${Colors.red};
+  background-color: ${Colors.primary};
   cursor: pointer;
 `
 
 export const Tag = styled.div`
   border-radius: 4px;
   border: none;
-  background-color: ${Colors.red};
-  color: ${Colors.pink};
+  background-color: ${Colors.primary};
+  color: ${Colors.secondary};
   padding: 8px 12px;
   text-transform: uppercase;
   width: fit-content;

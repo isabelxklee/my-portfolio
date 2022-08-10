@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {Colors} from '../../styles'
 
 export const HeaderContainer = styled.div`
-  border: 1px solid ${Colors.red};
+  border: 1px solid ${Colors.primary};
   padding: 20px;
   display: grid;
   grid-auto-flow: column;

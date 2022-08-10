@@ -4,7 +4,7 @@ import {IntroImage, ImageContainer} from './styles'
 
 const Intro = ({images}) => {
   const description =
-    'internet-surfing, code-wrangling, non-binary software developer. BACKGROUND IN product design, EDUCATION, AND KICKING A**.'
+    'internet-surfing, code-wrangling, non-binary software developer. addicted to making cool shit and KICKING A**.'
   return (
     <Box>
       <P $position="relative" $zIndex={1}>
