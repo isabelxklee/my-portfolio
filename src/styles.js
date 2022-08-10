@@ -22,8 +22,12 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const SiteTitle = styled.div`
-  margin: 300px 0 200px 0;
+  margin: 300px 0 240px 0;
   color: ${Colors.tertiary};
+
+  @media (max-width: 960px) {
+    margin: 200px 0 100px 0;
+  }
 `
 
 export const TagLine = styled.p`

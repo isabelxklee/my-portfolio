@@ -1,3 +1,19 @@
+@media (max-width: 1130px) {
+  img#id-1 {
+    top: 450px !important;
+  }
+
+  img#id-3 {
+    top: 600px !important;
+  }
+}
+
+@media (max-width: 960px) {
+  img {
+    display: none;
+  }
+}
+
 img#id-1 {
   border: 1px solid black;
   z-index: -1;
@@ -21,7 +37,7 @@ img#id-3 {
   z-index: -1;
   position: absolute;
   width: 275px;
-  top: 475px;
+  top: 525px;
   right: 600px;
 }
 
@@ -30,6 +46,6 @@ img#id-4 {
   z-index: -1;
   position: absolute;
   width: 275px;
-  top: 40px;
+  top: -5px;
   right: 325px;
 }
