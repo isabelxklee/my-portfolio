@@ -33,6 +33,10 @@ export const StyledLink = styled(NavHashLink)`
 
 export const Wrapper = styled.div`
   margin: 40px;
+
+  @media (max-width: 1000px) {
+    margin: 20px;
+  }
 `
 
 export const H1 = styled.h1`
@@ -97,6 +101,7 @@ export const Space = styled.div`
 export const AccordionContainer = styled(Box)`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
   transition: 0.5s;
 
@@ -127,6 +132,7 @@ export const IconContainer = styled.button`
   border: none;
   background: transparent;
   cursor: pointer;
+  height: 72px;
 `
 
 export const Half = styled.div`
