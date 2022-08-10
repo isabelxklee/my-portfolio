@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Helvetica Neue", "sans-serif";
     color: ${Colors.primary};
     background-color: ${Colors.secondary};
-    transition: 0.5s;
+    transition: 0.3s;
   }
 `
 
@@ -103,7 +103,7 @@ export const AccordionContainer = styled(Box)`
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s;
 
   &:hover {
     color: ${Colors.tertiary};
@@ -172,12 +172,12 @@ export const ThreeColumnGrid = styled(Grid)`
 export const ExternalLink = styled.a`
   text-decoration: none;
   color: ${Colors.primary};
-  transition: 0.5s;
+  transition: 0.3s;
   position: ${({$contact}) => ($contact ? 'absolute' : 'unset')};
   width: 100%;
   height: 100%;
   font-weight: 800;
-  transition: 0.5s;
+  transition: 0.3s;
 
   &:hover {
     color: ${Colors.tertiary};

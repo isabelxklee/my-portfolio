@@ -33,9 +33,9 @@ const TechWriting = () => {
         <Styled.ThreeColumnGrid>
           {techWritingPosts.map((post) => (
             <PostContainer key={post._id}>
-              <Styled.ExternalLink href={post.url} target="_blank" rel="noreferrer">
+              <a href={post.url} target="_blank" rel="noreferrer">
                 <MainImage src={transformImageURL(post.mainImage.asset.url)} alt={post.title} />
-              </Styled.ExternalLink>
+              </a>
               <div style={{padding: '20px'}}>
                 <Styled.H3>
                   <Styled.ExternalLink href={post.url} target="_blank" rel="noreferrer">
