@@ -10,7 +10,7 @@
 
    `$ brew install node`
 
-2. Clone this repo and cd into the directory.
+2. Clone this repo and `cd` into the directory.
 3. Install all dependencies.
 
    `$ npm install`
@@ -20,6 +20,12 @@
    `$ npm start`
 
 5. Open your browser and navigate to `http://localhost:3000/`.
+
+## Using Sanity.io
+
+1. In a new terminal tab, but still in this project directory, run `cd sanity`.
+2. To run the Sanity studio, run `npx sanity start`.
+3. To deploy any changes, run `npx sanity deploy`.
 
 ## Tech stack
 
