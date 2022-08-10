@@ -27,9 +27,7 @@ const Intro = ({description}) => {
       .catch(console.error)
   }, [])
 
-  const generateId = (element) => `id-${images.indexOf(element)}`
-
-  console.log(images)
+  const generateId = (element) => `id-${images.indexOf(element) + 1}`
 
   return (
     <>
@@ -37,17 +35,16 @@ const Intro = ({description}) => {
         {description.toUpperCase()}
       </Styled.P>
       {/* <ImageContainer> */}
-      {images &&
-        images.map((image) => {
-          return (
-            <img
-              key={image._id}
-              id={generateId(image)}
-              src={image.image.asset.url}
-              alt={image.altText}
-            />
-          )
-        })}
+      {images.map((image) => {
+        return (
+          <img
+            key={image._id}
+            id={generateId(image)}
+            src={image.image.asset.url}
+            alt={image.altText}
+          />
+        )
+      })}
       {/* </ImageContainer> */}
 
       <Styled.SiteTitle>
