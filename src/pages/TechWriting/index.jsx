@@ -25,7 +25,7 @@ const TechWriting = () => {
       .catch(console.error)
   }, [])
 
-  const transformImageURL = (URL) => `${URL}?w=900`
+  const transformImageURL = (URL) => `${URL}?w=1000`
 
   return (
     <>
