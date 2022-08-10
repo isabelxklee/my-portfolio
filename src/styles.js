@@ -98,6 +98,11 @@ export const AccordionContainer = styled(Box)`
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    color: ${Colors.tertiary};
+  }
 `
 
 export const ShowIcon = styled(Icon1)`
@@ -149,7 +154,7 @@ export const ExternalLink = styled.a`
   transition: 0.5s;
 
   &:hover {
-    opacity: 0.5;
+    color: ${Colors.tertiary};
   }
 `
 
