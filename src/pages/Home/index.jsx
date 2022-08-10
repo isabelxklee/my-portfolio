@@ -11,29 +11,22 @@ import Footer from '../../components/Footer'
 import sanityClient from '../../client.js'
 
 const Home = () => {
-  // const [images, setImages] = useState([])
+  const [aboutInfo, setAboutInfo] = useState(null)
 
-  // useEffect(() => {
-  //   sanityClient
-  //     .fetch(
-  //       `*[_type == "imageAsset"] {
-  //           _id,
-  //           altText,
-  //           "category": category[0]->title,
-  //           image{
-  //           asset->{
-  //             url
-  //           }
-  //         }
-  //       }`
-  //     )
-  //     .then((data) => setImages(data))
-  //     .catch(console.error)
-  // }, [])
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "about"] {
+            _id,
+            intro,
+            about
+        }`
+      )
+      .then((data) => setAboutInfo(data))
+      .catch(console.error)
+  }, [])
 
-  // const filterImages = (string) => {
-  //   return images.filter((image) => image.category === string)
-  // }
+  console.log(aboutInfo)
 
   return (
     <>

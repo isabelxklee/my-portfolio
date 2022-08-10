@@ -10,7 +10,7 @@ export default {
       type: 'string',
     },
     {
-      name: 'content',
+      name: 'about',
       title: 'About Copy',
       type: 'array',
       of: [{type: 'block'}],
