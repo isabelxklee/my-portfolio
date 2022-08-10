@@ -4,6 +4,10 @@ import {Box} from '../../styles'
 export const MainImage = styled.img`
   width: 100%;
   object-fit: cover;
+
+  @media (max-width: 1100px) {
+    height: 240px;
+  }
 `
 
 export const PostContainer = styled(Box)`
