@@ -10,7 +10,7 @@ export const Tag = styled(P)`
 `
 
 export const ProjectImage = styled.img`
-  border: 1px solid ${Colors.red};
+  border: 1px solid ${Colors.primary};
   width: 100%;
   height: 400px;
   object-fit: cover;

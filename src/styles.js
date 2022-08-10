@@ -4,8 +4,9 @@ import {ReactComponent as Icon1} from './assets/icon-show.svg'
 import {ReactComponent as Icon2} from './assets/icon-hide.svg'
 
 export const Colors = {
-  red: '#D10000',
-  pink: '#F4C7B9',
+  primary: '#1B1918',
+  secondary: '#EBFF00',
+  tertiary: '#0500FF',
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -14,14 +15,14 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     text-rendering: optimizeLegibility;
     font-family: "Helvetica Neue", "sans-serif";
-    color: ${Colors.red};
-    background-color: ${Colors.pink};
+    color: ${Colors.primary};
+    background-color: ${Colors.secondary};
     transition: 0.3s;
   }
 `
 
 export const StyledLink = styled(NavHashLink)`
-  color: ${Colors.red};
+  color: ${Colors.primary};
   text-decoration: none;
   font-size: 28px;
 
@@ -84,7 +85,7 @@ export const SpaceP = styled(P)`
 `
 
 export const Box = styled.div`
-  border: 1px solid ${Colors.red};
+  border: 1px solid ${Colors.primary};
   padding: 20px;
   margin-bottom: 20px;
 `
@@ -104,7 +105,7 @@ export const ShowIcon = styled(Icon1)`
   right: 0;
 
   path {
-    fill: ${Colors.red};
+    fill: ${Colors.primary};
   }
 `
 
@@ -113,7 +114,7 @@ export const HideIcon = styled(Icon2)`
   right: 0;
 
   path {
-    fill: ${Colors.red};
+    fill: ${Colors.primary};
   }
 `
 
@@ -139,7 +140,7 @@ export const Grid = styled.div`
 
 export const ExternalLink = styled.a`
   text-decoration: none;
-  color: ${Colors.red};
+  color: ${Colors.primary};
   transition: 0.3s;
   position: ${({$contact}) => ($contact ? 'absolute' : 'unset')};
   width: 100%;
@@ -156,15 +157,15 @@ export const Circle = styled.div`
   height: 50px;
   width: 50px;
   border-radius: 100%;
-  background-color: ${Colors.red};
+  background-color: ${Colors.primary};
   cursor: pointer;
 `
 
 export const Tag = styled.div`
   border-radius: 4px;
   border: none;
-  background-color: ${Colors.red};
-  color: ${Colors.pink};
+  background-color: ${Colors.primary};
+  color: ${Colors.secondary};
   padding: 8px 12px;
   text-transform: uppercase;
   width: fit-content;
