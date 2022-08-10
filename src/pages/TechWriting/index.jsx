@@ -26,7 +26,7 @@ const TechWriting = () => {
       .catch(console.error)
   }, [])
 
-  console.log(techWritingPosts)
+  const transformImageURL = (URL) => `${URL}?w=900`
 
   return (
     <>
@@ -34,7 +34,7 @@ const TechWriting = () => {
         <PressContainer>
           {techWritingPosts.map((post) => (
             <PostContainer key={post._id}>
-              <MainImage src={post.mainImage.asset.url} alt="" />
+              <MainImage src={transformImageURL(post.mainImage.asset.url)} alt="" />
               <div style={{padding: '20px'}}>
                 <Styled.H3>
                   <Styled.ExternalLink href={post.url} target="_blank" rel="nolink_referrer">
