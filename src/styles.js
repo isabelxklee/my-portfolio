@@ -86,6 +86,10 @@ export const H3 = styled.h3`
   font-size: 24px;
   font-weight: 800;
   margin: 0 0 12px 0;
+
+  @media (max-width: 1100px) {
+    font-size: 20px;
+  }
 `
 
 export const P = styled.p`
@@ -95,7 +99,7 @@ export const P = styled.p`
   position: ${({$position}) => $position};
   z-index: ${({$zIndex}) => $zIndex};
 
-  @media (max-width: 600px) {
+  @media (max-width: 1100px) {
     font-size: 20px;
   }
 `
@@ -184,10 +188,6 @@ export const ThreeColumnGrid = styled(Grid)`
 
   @media (max-width: 1100px) {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 800px) {
-    grid-template-columns: 1fr;
   }
 `
 
