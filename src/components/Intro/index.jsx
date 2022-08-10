@@ -30,9 +30,9 @@ const Intro = ({description}) => {
   const generateId = (element) => `id-${images.indexOf(element) + 1}`
 
   return (
-    <div style={{height: '750px'}}>
+    <>
       {/* <ImageContainer> */}
-      <div>
+      <>
         {images.map((image) => {
           return (
             <img
@@ -43,14 +43,14 @@ const Intro = ({description}) => {
             />
           )
         })}
-      </div>
+      </>
       {/* </ImageContainer> */}
 
       <Styled.SiteTitle>
         <Styled.H1>ISABEL K. LEE.</Styled.H1>
-        <Styled.H2>✨💙 {description.toUpperCase()} 💙✨</Styled.H2>
+        <Styled.TagLine>✨💙 {description.toUpperCase()} 💙✨</Styled.TagLine>
       </Styled.SiteTitle>
-    </div>
+    </>
   )
 }
 

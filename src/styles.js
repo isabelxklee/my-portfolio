@@ -22,9 +22,20 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const SiteTitle = styled.div`
-  /* margin: 120px 0 40px 0; */
-  margin-top: 300px;
+  margin: 300px 0 150px 0;
   color: ${Colors.tertiary};
+`
+
+export const TagLine = styled.p`
+  font-size: 32px;
+  font-weight: 500;
+  margin: 20px 0 0 0;
+  width: 70%;
+
+  @media (max-width: 600px) {
+    font-size: 28px;
+    width: 100%;
+  }
 `
 
 export const StyledLink = styled(NavHashLink)`
