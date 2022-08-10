@@ -30,28 +30,27 @@ const Intro = ({description}) => {
   const generateId = (element) => `id-${images.indexOf(element) + 1}`
 
   return (
-    <>
-      <Styled.P $position="relative" $zIndex={1}>
-        {description.toUpperCase()}
-      </Styled.P>
+    <div style={{height: '750px'}}>
       {/* <ImageContainer> */}
-      {images.map((image) => {
-        return (
-          <img
-            key={image._id}
-            id={generateId(image)}
-            src={image.image.asset.url}
-            alt={image.altText}
-          />
-        )
-      })}
+      <div>
+        {images.map((image) => {
+          return (
+            <img
+              key={image._id}
+              id={generateId(image)}
+              src={image.image.asset.url}
+              alt={image.altText}
+            />
+          )
+        })}
+      </div>
       {/* </ImageContainer> */}
 
       <Styled.SiteTitle>
-        <Styled.H1>ISABEL K. LEE</Styled.H1>
-        <Styled.H1>2022.</Styled.H1>
+        <Styled.H1>ISABEL K. LEE.</Styled.H1>
+        <Styled.H2>✨💙 {description.toUpperCase()} 💙✨</Styled.H2>
       </Styled.SiteTitle>
-    </>
+    </div>
   )
 }
 

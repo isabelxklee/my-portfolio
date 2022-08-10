@@ -1,15 +1,30 @@
 img#id-1 {
-  width: 350px;
+  z-index: -1;
+  position: absolute;
+  width: 300px;
+  right: 0;
+  top: 35%;
 }
 
 img#id-2 {
+  z-index: -1;
+  position: absolute;
   width: 300px;
+  left: 10%;
+  top: 0;
 }
 
 img#id-3 {
+  z-index: -1;
+  position: absolute;
   width: 315px;
+  top: 65%;
 }
 
 img#id-4 {
-  width: 375px;
+  z-index: -1;
+  position: absolute;
+  width: 350px;
+  top: 55%;
+  right: 30%;
 }
