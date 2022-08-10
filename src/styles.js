@@ -21,6 +21,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 `
 
+export const SiteTitle = styled.div`
+  margin: 120px 0 40px 0;
+`
+
 export const StyledLink = styled(NavHashLink)`
   color: ${Colors.primary};
   text-decoration: none;

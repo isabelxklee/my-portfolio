@@ -1,13 +1,12 @@
 import React, {useState, useEffect} from 'react'
-import {H1} from '../../styles'
-import {Title} from './styles'
+import * as Styled from '../../styles'
 import Intro from '../../components/Intro'
 import Accordion from '../../components/Accordion'
+import Footer from '../../components/Footer'
 import TechWriting from '../TechWriting'
 import Press from '../Press'
 import About from '../About'
 import Contact from '../Contact'
-import Footer from '../../components/Footer'
 import sanityClient from '../../client.js'
 
 const Home = () => {
@@ -32,10 +31,10 @@ const Home = () => {
 
   return (
     <>
-      <Title>
-        <H1>ISABEL K. LEE</H1>
-        <H1>2022.</H1>
-      </Title>
+      <Styled.SiteTitle>
+        <Styled.H1>ISABEL K. LEE</Styled.H1>
+        <Styled.H1>2022.</Styled.H1>
+      </Styled.SiteTitle>
       <Intro description={description} />
       <Accordion title={'Tech Writing'}>
         <TechWriting />
