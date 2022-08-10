@@ -117,6 +117,10 @@ export const ShowIcon = styled(Icon1)`
   path {
     fill: ${Colors.primary};
   }
+
+  @media (max-width: 600px) {
+    width: 50px;
+  }
 `
 
 export const HideIcon = styled(Icon2)`
@@ -125,6 +129,10 @@ export const HideIcon = styled(Icon2)`
 
   path {
     fill: ${Colors.primary};
+  }
+
+  @media (max-width: 600px) {
+    width: 50px;
   }
 `
 
