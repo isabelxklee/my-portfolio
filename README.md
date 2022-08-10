@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4cddb7c5-b587-4bb9-b416-5398b776051b/deploy-status)](https://app.netlify.com/sites/kleetime/deploys)
 
-# My Portfolio ⚫️
+# My Portfolio 💙
 
 ![kleetime com_](https://user-images.githubusercontent.com/52360534/149446429-e4d1d66d-a99a-4651-9cd1-5d80135fd382.png)
 
@@ -26,5 +26,4 @@
 - React.js
 - HTML/CSS
 - [styled-components](https://styled-components.com)
-- [React Router Hash Link](https://github.com/rafgraph/react-router-hash-link)
 - [Sanity.io](https://www.sanity.io/)
