@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {P, Box} from '../../styles'
+import * as Styled from '../../styles'
 import {IntroImage, ImageContainer} from './styles'
 import sanityClient from '../../client.js'
 
@@ -27,19 +27,26 @@ const Intro = ({description}) => {
   const thisCategory = 'Intro'
 
   return (
-    <Box>
-      <P $position="relative" $zIndex={1}>
-        {description.toUpperCase()}
-      </P>
-      <ImageContainer>
-        {images &&
-          images
-            .filter((image) => image.category === thisCategory)
-            .map((image) => (
-              <IntroImage key={image._id} src={image.image.asset.url} alt={image.altText} />
-            ))}
-      </ImageContainer>
-    </Box>
+    <>
+      <Styled.SiteTitle>
+        <Styled.H1>ISABEL K. LEE</Styled.H1>
+        <Styled.H1>2022.</Styled.H1>
+      </Styled.SiteTitle>
+
+      <Styled.Box>
+        <Styled.P $position="relative" $zIndex={1}>
+          {description.toUpperCase()}
+        </Styled.P>
+        <ImageContainer>
+          {images &&
+            images
+              .filter((image) => image.category === thisCategory)
+              .map((image) => (
+                <IntroImage key={image._id} src={image.image.asset.url} alt={image.altText} />
+              ))}
+        </ImageContainer>
+      </Styled.Box>
+    </>
   )
 }
 

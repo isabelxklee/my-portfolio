@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import * as Styled from '../../styles'
 import Intro from '../../components/Intro'
 import Accordion from '../../components/Accordion'
 import Footer from '../../components/Footer'
@@ -31,10 +30,6 @@ const Home = () => {
 
   return (
     <>
-      <Styled.SiteTitle>
-        <Styled.H1>ISABEL K. LEE</Styled.H1>
-        <Styled.H1>2022.</Styled.H1>
-      </Styled.SiteTitle>
       <Intro description={description} />
       <Accordion title={'Tech Writing'}>
         <TechWriting />
@@ -52,4 +47,5 @@ const Home = () => {
     </>
   )
 }
+
 export default Home
