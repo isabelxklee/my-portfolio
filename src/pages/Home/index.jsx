@@ -11,29 +11,29 @@ import Footer from '../../components/Footer'
 import sanityClient from '../../client.js'
 
 const Home = () => {
-  const [images, setImages] = useState([])
+  // const [images, setImages] = useState([])
 
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "imageAsset"] {
-            _id,
-            altText,
-            "category": category[0]->title,
-            image{
-            asset->{
-              url
-            }
-          }
-        }`
-      )
-      .then((data) => setImages(data))
-      .catch(console.error)
-  }, [])
+  // useEffect(() => {
+  //   sanityClient
+  //     .fetch(
+  //       `*[_type == "imageAsset"] {
+  //           _id,
+  //           altText,
+  //           "category": category[0]->title,
+  //           image{
+  //           asset->{
+  //             url
+  //           }
+  //         }
+  //       }`
+  //     )
+  //     .then((data) => setImages(data))
+  //     .catch(console.error)
+  // }, [])
 
-  const filterImages = (string) => {
-    return images.filter((image) => image.category === string)
-  }
+  // const filterImages = (string) => {
+  //   return images.filter((image) => image.category === string)
+  // }
 
   return (
     <>
@@ -41,7 +41,7 @@ const Home = () => {
         <H1>ISABEL K. LEE</H1>
         <H1>2022.</H1>
       </Title>
-      <Intro images={filterImages('Intro')} />
+      <Intro />
       <Accordion title={'Tech Writing'}>
         <TechWriting />
       </Accordion>
