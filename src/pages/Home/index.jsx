@@ -11,7 +11,8 @@ import Footer from '../../components/Footer'
 import sanityClient from '../../client.js'
 
 const Home = () => {
-  const [aboutInfo, setAboutInfo] = useState(null)
+  const [aboutCopy, setAboutCopy] = useState(null)
+  const [description, setDescription] = useState('')
 
   useEffect(() => {
     sanityClient
@@ -22,11 +23,12 @@ const Home = () => {
             about
         }`
       )
-      .then((data) => setAboutInfo(data))
+      .then((data) => {
+        setDescription(data[0].intro)
+        setAboutCopy(data[0].about)
+      })
       .catch(console.error)
   }, [])
-
-  console.log(aboutInfo)
 
   return (
     <>
@@ -34,7 +36,7 @@ const Home = () => {
         <H1>ISABEL K. LEE</H1>
         <H1>2022.</H1>
       </Title>
-      <Intro />
+      <Intro description={description} />
       <Accordion title={'Tech Writing'}>
         <TechWriting />
       </Accordion>
@@ -42,7 +44,7 @@ const Home = () => {
         <Press />
       </Accordion>
       <Accordion title={'About'}>
-        <About />
+        <About aboutCopy={aboutCopy} />
       </Accordion>
       <Accordion title={'Contact'}>
         <Contact />

@@ -3,7 +3,7 @@ import {P, Box} from '../../styles'
 import {IntroImage, ImageContainer} from './styles'
 import sanityClient from '../../client.js'
 
-const Intro = () => {
+const Intro = ({description}) => {
   const [images, setImages] = useState([])
 
   useEffect(() => {
@@ -28,9 +28,9 @@ const Intro = () => {
 
   return (
     <Box>
-      {/* <P $position="relative" $zIndex={1}>
+      <P $position="relative" $zIndex={1}>
         {description.toUpperCase()}
-      </P> */}
+      </P>
       <ImageContainer>
         {images &&
           images
